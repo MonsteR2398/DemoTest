@@ -21,7 +21,7 @@ public class FloodModeState : BaseModeState
         floodObj = _objectPool.Get();
         floodObj.transform.SetPositionAndRotation(_data.areaPosition, Quaternion.identity);
         floodObj.transform.localScale = Vector3.one * _data.rangeFlood / 10;
-        StartManagedCoroutine(MoveFlood());
+        StartManagedCoroutine(MoveFloodUp());
 #if UNITY_EDITOR
         floodObj.GetComponent<Renderer>().material.mainTextureScale = Vector3.one * _data.rangeFlood;
 #endif
@@ -36,11 +36,7 @@ public class FloodModeState : BaseModeState
         Debug.Log("Вода исчезла.");
     }
 
-    public override void UpdateState()
-    {
-    }
-    
-    private IEnumerator MoveFlood()
+    private IEnumerator MoveFloodUp()
     {
         float time = 0f;
         Vector3 startPos = _data.areaPosition;
@@ -53,7 +49,23 @@ public class FloodModeState : BaseModeState
             time += Time.deltaTime;
             yield return null;
         }
+        floodObj.transform.position = endPos;
+        StartManagedCoroutine(MoveFloodDown(endPos));
+    }
 
+    private IEnumerator MoveFloodDown(Vector3 startPosition)
+    {
+        float time = 0f;
+        Vector3 startPos = startPosition;
+        Vector3 endPos = Vector3.down * _data.areaPosition.y;
+
+        while (time < _data.fillingTime)
+        {
+            float progress = Mathf.SmoothStep(0f, 1f, time / _data.fillingTime);
+            floodObj.transform.position = Vector3.Lerp(startPos, endPos, progress);
+            time += Time.deltaTime;
+            yield return null;
+        }
         floodObj.transform.position = endPos;
     }
 

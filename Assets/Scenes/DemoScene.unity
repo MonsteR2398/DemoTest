@@ -442,7 +442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9efd8fc0d2e5bd24f848079e36a36364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _modeSwitchInterval: 5
+  _modeSwitchInterval: 10
   _modeConfigs: {fileID: 11400000, guid: 92161627c0e24dc4a9fb8705564e5b31, type: 2}
 --- !u!81 &1763440717572255625
 AudioListener:
