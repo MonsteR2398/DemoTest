@@ -17,8 +17,8 @@ MonoBehaviour:
   ModeIcon: {fileID: 0}
   ModeDescription: 
   prefab: {fileID: 701603614764621597, guid: f1579fd944c379540b075b17ad09939e, type: 3}
-  moveSpeed: 10
+  moveSpeed: 50
   noiseScale: 0.5
-  heightVariation: 1
+  heightVariation: 0.05
   position: {x: 0, y: 5, z: 0}
   range: 100

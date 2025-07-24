@@ -5,7 +5,7 @@ using UnityEngine;
 public class TornadoModeState : BaseModeState
 {
     private TornadoConfig _data;
-    private float _timeOffsetX, _timeOffsetZ;
+    private float _offsetX, _offsetZ;
     private BaseObject tornadoObj;
     private Renderer tornadoRenderer;
 
@@ -20,8 +20,8 @@ public class TornadoModeState : BaseModeState
     {
         base.EnterState();
 
-        _timeOffsetX = Random.Range(-_data.range, _data.range);
-        _timeOffsetZ = Random.Range(-_data.range, _data.range);
+        _offsetX = Random.Range(-_data.range, _data.range);
+        _offsetZ = Random.Range(-_data.range, _data.range);
 
         tornadoObj = _objectPool.Get();
         tornadoRenderer = tornadoObj.transform.GetComponent<Renderer>();
@@ -40,14 +40,14 @@ public class TornadoModeState : BaseModeState
 
     public override void FixedUpdateState()
     {
-        float x = Mathf.PerlinNoise(Time.time * _data.noiseScale, _timeOffsetX) * 2 - 1;
-        float z = Mathf.PerlinNoise(_timeOffsetZ, Time.time * _data.noiseScale) * 2 - 1;
-        float y = Mathf.Sin(Time.time) * 0.2f;
+        float x = Mathf.PerlinNoise(Time.time * _data.noiseScale, _offsetX) * 2 - 1;
+        float z = Mathf.PerlinNoise(_offsetZ, Time.time * _data.noiseScale) * 2 - 1;
+        float y = Mathf.Sin(Time.time) * _data.heightVariation;
 
-        float currentRadius = 2f + Mathf.PerlinNoise(Time.time * 0.3f, 0) * 1f;
-
-        Vector3 newPos = _data.position + new Vector3(x, y, z).normalized * currentRadius;
-        tornadoObj.transform.position = Vector3.Lerp(tornadoObj.transform.position, newPos, Time.deltaTime * 2f);
+         Vector3 newPos = _data.position + new Vector3(x, y, z) * _data.moveSpeed;
+            newPos.x = Mathf.Clamp(newPos.x, -_data.range, _data.range);
+            newPos.z = Mathf.Clamp(newPos.z, -_data.range, _data.range);
+        tornadoObj.transform.position = Vector3.Lerp(tornadoObj.transform.position, newPos, Time.deltaTime);
         
         tornadoRenderer.material.color = Color.Lerp(Color.gray, Color.white, Mathf.PingPong(Time.time, 1f));
     }
