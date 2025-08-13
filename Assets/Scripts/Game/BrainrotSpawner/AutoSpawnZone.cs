@@ -29,7 +29,7 @@ public void SpawnItems()
 
         for (int i = 0; i < itemsCount; i++)
         {
-            var brainrot = itemSpawner.Spawn(false);
+            var brainrot = itemSpawner.Spawn(needSave: false);
             if (brainrot == null) continue;
 
             float itemRadius = brainrot.GetSize() * 0.5f;

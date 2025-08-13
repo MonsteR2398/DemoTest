@@ -50,7 +50,6 @@ public class InventorySystem : MonoBehaviour
             newEgg.Data.HasSpawned = false;
             itemToAdd = newEgg;
 
-            newEgg.AddUniqueId();
             if (needSave)
             {
                 LoadInitializer.Instance.SaveLoadManager.AddEggData(newEgg.Data);

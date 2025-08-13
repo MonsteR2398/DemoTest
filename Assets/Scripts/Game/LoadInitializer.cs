@@ -48,11 +48,12 @@ public class LoadInitializer : MonoBehaviour
             }
             // заменить на пул
             Egg egg = Instantiate(prefab, position, Quaternion.identity);
+            egg.Data.SetUniqueId(eggsData[i].UniqueId);
             egg.Data.Rarity = eggsData[i].Rarity;
             egg.Data.Variant = eggsData[i].Variant;
             egg.Data.HasActiveTimer = eggsData[i].HasActiveTimer;
             egg.Data.Position = position;
-            egg.Data.RemainingTime = eggsData[i].RemainingTime;
+            egg.Data.LastSaveTimeString = eggsData[i].LastSaveTimeString;
             egg.Data.SpawnTimer = eggsData[i].SpawnTimer;
             if (!eggsData[i].HasSpawned)
             {
@@ -61,8 +62,14 @@ public class LoadInitializer : MonoBehaviour
                 continue;
             }
             if (egg is ITimer timer)
+            {
+                egg.GetOfflineTime();
                 timer.ActivateTimer();
+            }
+
             egg.OnSpawnToGround();
+            // SaveLoadManager.AddEggData(egg.Data);
+            // SaveLoadManager.RemoveBrainrotByUniqueId(eggsData[i].UniqueId);
         }
     }
 
@@ -72,7 +79,6 @@ public class LoadInitializer : MonoBehaviour
         var brainrotsData = SaveLoadManager.BrainrotsData;
         for (int i = 0; i < brainrotsData.Count; i++)
         {
-        Debug.Log(brainrotsData[i].Position);
             Vector3 position = brainrotsData[i].Position;
             Brainrot prefab = brainrotPrefabs.FirstOrDefault(brainrot => brainrot.Data.Id == brainrotsData[i].Id);
             if (prefab == null)
@@ -82,12 +88,12 @@ public class LoadInitializer : MonoBehaviour
             }
             // заменить на пул
             Brainrot brainrot = Instantiate(prefab, position, Quaternion.identity);
+            brainrot.Data.SetUniqueId(brainrotsData[i].UniqueId);
             brainrot.Data.Rarity = brainrotsData[i].Rarity;
             brainrot.Data.Variant = brainrotsData[i].Variant;
             brainrot.Data.Income = brainrotsData[i].Income;
             brainrot.Data.Size = brainrotsData[i].Size;
             brainrot.Data.Position = position;
-
             brainrot.SetSize(brainrot.Data.Size);
 
             if (!brainrotsData[i].HasSpawned)
@@ -98,6 +104,8 @@ public class LoadInitializer : MonoBehaviour
             }
 
             brainrot.OnSpawnToGround();
+            // SaveLoadManager.AddBrainrotData(brainrot.Data);
+            // SaveLoadManager.RemoveBrainrotByUniqueId(brainrotsData[i].UniqueId);
         }
     }
 }

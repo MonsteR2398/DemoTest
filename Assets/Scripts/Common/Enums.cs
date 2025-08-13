@@ -4,7 +4,6 @@ public enum EggType
     Uncommon,
     Rare,
     Pixel,
-    Dragon,
     Epic,
     Legendary,
     Mythical

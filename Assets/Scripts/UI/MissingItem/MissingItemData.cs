@@ -19,6 +19,16 @@ public class MissingItemData : MonoBehaviour
     {
         Item = item;
         IconImage.sprite = item.GetIcon();
+        var variant = item.GetVariant();
+        if (variant != Variant.Default)
+        {
+            IconBackground.gameObject.SetActive(true);
+            IconBackground.color = item.GetColorWithVariant(variant);
+        }
+        else
+        {
+            IconBackground.gameObject.SetActive(false);
+        }
     }
 
 

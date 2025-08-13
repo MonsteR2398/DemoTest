@@ -28,6 +28,17 @@ public class MissingItemViewer : MonoBehaviour
         icon.Image.sprite = item.GetIcon();
         icon.gameObject.SetActive(true);
 
+        var variant = item.GetVariant();
+        if (variant != Variant.Default)
+        {
+            icon.BackgroundImage.gameObject.SetActive(true);
+            icon.BackgroundImage.color = item.GetColorWithVariant(variant);
+        }
+        else
+        {
+            icon.BackgroundImage.gameObject.SetActive(false);
+        }
+
         _activeIcons.Add(icon);
         return icon;
     }

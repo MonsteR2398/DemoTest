@@ -20,6 +20,19 @@ public class Item : PoolableMono<Item>, IObjectTextDisplay
     public override void OnGetFromPool()
     {
     }
+
+    public virtual Variant GetVariant() => Variant.Default;
+    public Color GetColorWithVariant(Variant variant)
+    {
+        Debug.Log(variant);
+        switch (variant)
+        {
+            case Variant.Golden: return new Color(1f, 0.85f, 0f);
+            case Variant.Diamond: return new Color(0f, 1f, 1f);
+            default: return Color.white;
+        }
+        
+    }
     
     public void SetNowEnemy(bool value) => NowEnemy = value; 
     public virtual Sprite GetIcon() => _icon;

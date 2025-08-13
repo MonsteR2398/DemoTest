@@ -7,6 +7,7 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IDragHandler, I
 {
     [Header("References")]
     public Image ItemIcon;
+    public Image BackgroundIcon;
     public float ItemSize { get; private set; }
     public TextMeshProUGUI CountText;
     [SerializeField] private LayerMask groundLayer;
@@ -28,6 +29,16 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IDragHandler, I
     {
         _item = item;
         _count = count;
+        var variant = item.GetVariant();
+        if (variant != Variant.Default)
+        {
+            BackgroundIcon.gameObject.SetActive(true);
+            BackgroundIcon.color = item.GetColorWithVariant(variant);
+        }
+        else
+        {
+            BackgroundIcon.gameObject.SetActive(false);
+        }
         ItemIcon.sprite = item.GetIcon();
         if (item is Brainrot rot)
             ItemSize = rot.GetSize();

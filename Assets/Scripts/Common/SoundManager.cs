@@ -27,7 +27,7 @@ public class SoundManager : MonoBehaviour
         if (audio.SoundInterval <= 0)
         {
             audio.SoundInterval = 1;
-            Debug.LogWarning($"Interval for {audio.Clip.name} was corrected to 1.");
+            //Debug.LogWarning($"Interval for {audio.Clip.name} was corrected to 1.");
         }
         
         if (!_activeSounds.ContainsKey(audio.Clip))

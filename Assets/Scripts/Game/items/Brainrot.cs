@@ -4,7 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class BrainrotData
 {
-    public string UniqueId;
+    public string UniqueId { get; private set; }
     public int Id;
     public int Income;
     [HideInInspector] public Rarity Rarity;
@@ -12,6 +12,15 @@ public class BrainrotData
     [HideInInspector] public float Size;
     [HideInInspector] public bool HasSpawned;
     [HideInInspector] public Vector3 Position;
+
+
+    public string SetUniqueId(string value) => UniqueId = value;
+    public void AddUniqueId()
+    {
+        if (string.IsNullOrEmpty(UniqueId))
+            SetUniqueId(System.Guid.NewGuid().ToString());
+    }
+
 }
 public class Brainrot : Item, ITriggerEnterHandler, ISoundEmitter, ISpawned
 {
@@ -40,6 +49,7 @@ public class Brainrot : Item, ITriggerEnterHandler, ISoundEmitter, ISpawned
         Initialize();
     }
 
+
     public void Initialize()
     {
         FlipToGlobalXPos();
@@ -55,19 +65,17 @@ public class Brainrot : Item, ITriggerEnterHandler, ISoundEmitter, ISpawned
         if (!NowEnemy)
         {
             TextDisplayEvents.RaiseDisplayDisabled(this);
-            StopCoroutine(incomeRoutine);
+            if(incomeRoutine != null)
+                StopCoroutine(incomeRoutine);
         }
         _animator.StopPlayback();
     }
 
     public override void OnSpawnToGround()
     {
-        HasSpawned = true;
-        base.OnSpawnToGround();
+        Data.HasSpawned = true;
         Data.Position = transform.position;
         _animator.Play("Dance");
-        if (string.IsNullOrEmpty(Data.UniqueId))
-            Data.UniqueId = System.Guid.NewGuid().ToString();
     }
 
     public override void OnGetFromPool()
@@ -80,7 +88,6 @@ public class Brainrot : Item, ITriggerEnterHandler, ISoundEmitter, ISpawned
     {
         while (true)
         {
-            Debug.Log(Data.Income);
             yield return new WaitForSeconds(1f);
             _totalIncome += Data.Income;
         }
@@ -98,6 +105,8 @@ public class Brainrot : Item, ITriggerEnterHandler, ISoundEmitter, ISpawned
         Data.Size = size;
         transform.localScale = Vector3.one * size;
     }
+
+    public override Variant GetVariant() => Data.Variant;
 
     public float GetSize() => Data.Size;
 

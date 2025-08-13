@@ -31,11 +31,13 @@ public class BrainrotSpawner : MonoBehaviour
         return Mathf.Lerp(minSize, maxSize, sizeFactor);
     }
 
-    public Brainrot Spawn(bool needSave = true)
+    public Brainrot Spawn(Variant variant = Variant.Default, bool needSave = true)
     {
         Brainrot brainrot = Instantiate((Brainrot)spawnerConfig.GetRandomItem(), transform.position, Quaternion.identity);
         if (_nowEnemy) brainrot.NowEnemy = _nowEnemy;
         brainrot.Data.Rarity = spawnerConfig.GetRandomRarity();
+        if(variant != Variant.Default)
+            brainrot.Data.Variant = variant;
         brainrot.OnSpawnToGround();
         float size = GetRandomSize();
         brainrot.SetSize(size);

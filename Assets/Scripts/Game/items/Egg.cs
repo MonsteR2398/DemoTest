@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 [System.Serializable]
 public class EggData
 {
-    public string UniqueId;
+    public string UniqueId { get; private set; }
     public int Id;
     public EggType EggType;
     public int OpenPrice;
@@ -14,7 +15,16 @@ public class EggData
     [HideInInspector] public Vector3 Position;
     [HideInInspector] public Rarity Rarity;
     [HideInInspector] public Variant Variant;
-    [HideInInspector] public long RemainingTime;
+
+    [HideInInspector] public string LastSaveTimeString;
+
+    public void UpdateLastSaveTimeString() => LastSaveTimeString = DateTime.Now.ToBinary().ToString();
+    public string SetUniqueId(string value) => UniqueId = value;
+    public void AddUniqueId()
+    {
+        if (string.IsNullOrEmpty(UniqueId))
+            SetUniqueId(System.Guid.NewGuid().ToString());
+    }
 }
 
 public class Egg : Item, IConveyorMovable, ITimer, IBuyable, ISpawned
@@ -39,21 +49,15 @@ public class Egg : Item, IConveyorMovable, ITimer, IBuyable, ISpawned
     //     TextDisplayEvents.RaiseDisplayEnabled(this);
     // }
 
+
     public override void OnSpawnToGround()
     {
         Data.HasSpawned = true;
         base.OnSpawnToGround();
         Data.Position = transform.position;
-        AddUniqueId();
-    }
-    
-
-    public void AddUniqueId()
-    {
-        if (string.IsNullOrEmpty(Data.UniqueId))
-            Data.UniqueId = System.Guid.NewGuid().ToString();
     }
 
+    public override Variant GetVariant() => Data.Variant;
     // IBuyable implementation
 
     public string GetItemName() => _itemName;
@@ -90,7 +94,7 @@ public class Egg : Item, IConveyorMovable, ITimer, IBuyable, ISpawned
         else
             if (Data.HasSpawned) return "";
 
-
+        
         var variant = $"<style=Variant{Data.Variant}>{Data.Variant}</style>\n";
         if (Data.Variant == Variant.Default) variant = "";
         var rarity = $"<style=Rarity{Data.Rarity}>{Data.Rarity}</style>\n";
@@ -105,6 +109,18 @@ public class Egg : Item, IConveyorMovable, ITimer, IBuyable, ISpawned
         Data.HasActiveTimer = true;
         TextDisplayEvents.RaiseDisplayEnabled(this);
         StartCoroutine(Timer());
+    }
+
+    public void GetOfflineTime()
+    {
+        if (!string.IsNullOrEmpty(Data.LastSaveTimeString))
+        {
+            Debug.Log(Data.LastSaveTimeString);
+            DateTime lastSaveTime = DateTime.FromBinary(Convert.ToInt64(Data.LastSaveTimeString));
+            TimeSpan offlineTime = DateTime.Now - lastSaveTime;
+            Data.SpawnTimer -= (long)offlineTime.TotalSeconds;
+        }
+        Data.UpdateLastSaveTimeString();
     }
 
     private IEnumerator Timer()
@@ -123,7 +139,7 @@ public class Egg : Item, IConveyorMovable, ITimer, IBuyable, ISpawned
         if (!string.IsNullOrEmpty(Data.UniqueId))
             LoadInitializer.Instance.SaveLoadManager.RemoveEggByUniqueId(Data.UniqueId);
         
-        this.GetComponent<BrainrotSpawner>().Spawn();
+        this.GetComponent<BrainrotSpawner>().Spawn(Data.Variant);
         Debug.Log($"Реализация открытия {Data.Rarity} яйца");
     }
 

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ItemViewerData : MonoBehaviour
 {
     public Image Image;
-
+    public Image BackgroundImage;
 
     void OnEnable()
     {
