@@ -143,7 +143,7 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IDragHandler, I
             else if (_phantomItem is Brainrot brainrot)
             {
                 LoadInitializer.Instance.SaveLoadManager.RemoveBrainrotByUniqueId(brainrot.Data.UniqueId);
-                brainrot.Data.HasSpawned = true;
+                _phantomItem.OnSpawnToGround();
                 LoadInitializer.Instance.SaveLoadManager.AddBrainrotData(brainrot.Data);
                 LoadInitializer.Instance.SaveLoadManager.SaveBrainrotsData();
             }

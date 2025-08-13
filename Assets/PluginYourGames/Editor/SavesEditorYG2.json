@@ -7,7 +7,7 @@
         false,
         false
     ],
-    "idSave": 8,
+    "idSave": 12,
     "intData": [
         {
             "key": "Eggs",
@@ -55,7 +55,7 @@
         },
         {
             "key": "Brainrots",
-            "value": 1
+            "value": 3
         },
         {
             "key": "Brainrot_0_Id",
@@ -76,6 +76,46 @@
         {
             "key": "Brainrot_0_HasSpawned",
             "value": 1
+        },
+        {
+            "key": "Brainrot_1_Id",
+            "value": 1
+        },
+        {
+            "key": "Brainrot_1_Rarity",
+            "value": 1
+        },
+        {
+            "key": "Brainrot_1_Variant",
+            "value": 0
+        },
+        {
+            "key": "Brainrot_1_Income",
+            "value": 10
+        },
+        {
+            "key": "Brainrot_1_HasSpawned",
+            "value": 0
+        },
+        {
+            "key": "Brainrot_2_Id",
+            "value": 1
+        },
+        {
+            "key": "Brainrot_2_Rarity",
+            "value": 1
+        },
+        {
+            "key": "Brainrot_2_Variant",
+            "value": 0
+        },
+        {
+            "key": "Brainrot_2_Income",
+            "value": 10
+        },
+        {
+            "key": "Brainrot_2_HasSpawned",
+            "value": 0
         }
     ],
     "longData": [
@@ -136,6 +176,38 @@
         {
             "key": "Brainrot_0_PositionZ",
             "value": 3.9541778564453127
+        },
+        {
+            "key": "Brainrot_1_Size",
+            "value": 1.0
+        },
+        {
+            "key": "Brainrot_1_PositionX",
+            "value": -29.011775970458986
+        },
+        {
+            "key": "Brainrot_1_PositionY",
+            "value": 0.15841500461101533
+        },
+        {
+            "key": "Brainrot_1_PositionZ",
+            "value": 3.9541778564453127
+        },
+        {
+            "key": "Brainrot_2_Size",
+            "value": 1.0
+        },
+        {
+            "key": "Brainrot_2_PositionX",
+            "value": -29.011775970458986
+        },
+        {
+            "key": "Brainrot_2_PositionY",
+            "value": 0.15841500461101533
+        },
+        {
+            "key": "Brainrot_2_PositionZ",
+            "value": 3.9541778564453127
         }
     ],
     "stringData": [
@@ -150,6 +222,14 @@
         {
             "key": "Brainrot_0_UniqueId",
             "value": "5f61d9d6-3c74-42da-983d-ddcb8780241d"
+        },
+        {
+            "key": "Brainrot_1_UniqueId",
+            "value": "18a74910-3f32-4822-8617-e390ffeeddf0"
+        },
+        {
+            "key": "Brainrot_2_UniqueId",
+            "value": "faaa8773-b275-4b6d-8775-f0cb95015c96"
         }
     ]
 }
