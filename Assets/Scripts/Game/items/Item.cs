@@ -1,73 +1,40 @@
+using System;
 using UnityEngine;
 
-public abstract class Item : PoolableMono<Item>, IConveyorMovable, IObjectTextDisplay
+public class Item : PoolableMono<Item>, IObjectTextDisplay
 {
-    public int Price;
-    private IConveyor _currentConveyor;
-    private Vector3 _verticalVelocity;
-    private Transform _transform;
+    [SerializeField] protected string _itemName;
+    [SerializeField] protected int _price;
 
-    public bool IsOnConveyor { get; set; }
-    public bool CanCollect { get; set; } = true;
-    public bool IsGrounded { get; private set; }
+    [SerializeField] protected Vector3 _displayOffset;
 
-    protected void Awake()
+    [SerializeField] protected Sprite _icon;
+    protected bool _canBuy = true;
+    public bool NowEnemy = false;
+
+
+    public virtual void OnSpawnToGround()
     {
-        _transform = transform;
-    }
-    public int GetPrice() => Price;
-
-    public void SetPrice(int price) => Price = price;
-
-    public void ApplyGravity(Vector3 direction, float force, float deltaTime)
-    {
-        if (!IsOnConveyor)
-        {
-            var gravityThisFrame = force * deltaTime;
-            _verticalVelocity.y += gravityThisFrame;
-            _transform.position -= _verticalVelocity;
-        }
-        else
-        {
-            _verticalVelocity = Vector3.zero;
-        }
-    }
-    public void SetConveyor(IConveyor conveyor) => _currentConveyor = conveyor;
-
-    public override void OnReturnToPool()
-    {
-        _verticalVelocity = Vector3.zero;
-        IsGrounded = false;
-        IsOnConveyor = false;
-
-        _currentConveyor?.RemoveMovable(this);
-        _currentConveyor = null;
     }
 
-    public void MoveToTargetOnConveyor(Vector3 target, float speed)
+    public override void OnGetFromPool()
     {
-        float step = speed * Time.fixedDeltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, target, step);
     }
+    
+    public void SetNowEnemy(bool value) => NowEnemy = value; 
+    public virtual Sprite GetIcon() => _icon;
+    public virtual string GetName() => _itemName;
+    public virtual int GetPrice() => _price;
 
-    //IObjectTextDisplay
-    public virtual string GetTextOnDisplay() => Price.ToString();
+
+
+    // IObjectTextDisplay implementation
+    public Vector3 GetPosition() => transform.position;
+    public virtual string GetTextOnDisplay() => _itemName;
+    public virtual bool IsAlwaysVisible() => false;
+    public virtual bool ShouldOrientToCamera() => true;
+
+    // Added for Inventory System
+    public virtual string GetItemID() => _itemName;
+
 }
-
-public enum Rarity
-{
-    Common,
-    Uncommon,
-    Rare,
-    Epic,
-    Legendary,
-    Mythical
-}
-
-public enum Variant
-{
-    Default,
-    Golden,
-    Diamond
-}
-

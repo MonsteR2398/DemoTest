@@ -1,35 +1,181 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
-
-public class Egg : Item
+[System.Serializable]
+public class EggData
 {
+    public string UniqueId;
     public int Id;
+    public EggType EggType;
+    public int OpenPrice;
+    public bool HasActiveTimer;
+    public float SpawnTimer;
+    [HideInInspector] public bool HasSpawned;
+    [HideInInspector] public Vector3 Position;
+    [HideInInspector] public Rarity Rarity;
+    [HideInInspector] public Variant Variant;
+    [HideInInspector] public long RemainingTime;
+}
 
-    [SerializeField] private string _name;
-    [NonSerialized] public Rarity Rarity;
-    [NonSerialized] public Variant Variant;
+public class Egg : Item, IConveyorMovable, ITimer, IBuyable, ISpawned
+{
+    public EggData Data;
+    public bool IsOnConveyor { get; set; }
+    public bool HasSpawned 
+    {
+        get => Data.HasSpawned;
+        set => Data.HasSpawned = value;
+    }
+
+    private IConveyor _currentConveyor;
 
 
-    private void OnEnable() => TextDisplayEvents.RaiseDisplayEnabled(this);
-    private void OnDisable() => TextDisplayEvents.RaiseDisplayDisabled(this);
+    // public void OnSpawn()
+    // {
+    //     Data.SpawnTimer = 0;
+    //     Data.HasActiveTimer = false;
+    //     IsOnConveyor = false;
+    //     _currentConveyor = null;
+    //     TextDisplayEvents.RaiseDisplayEnabled(this);
+    // }
+
+    public override void OnSpawnToGround()
+    {
+        Data.HasSpawned = true;
+        base.OnSpawnToGround();
+        Data.Position = transform.position;
+        AddUniqueId();
+    }
+    
+
+    public void AddUniqueId()
+    {
+        if (string.IsNullOrEmpty(Data.UniqueId))
+            Data.UniqueId = System.Guid.NewGuid().ToString();
+    }
+
+    // IBuyable implementation
+
+    public string GetItemName() => _itemName;
+    public override int GetPrice() => Data.HasSpawned ? Data.OpenPrice : _price;
+    public bool CanBuy() => _canBuy;
+    public bool SetCanBuy(bool value) => _canBuy = value;
+    public bool HasActiveTimer() => Data.HasActiveTimer;
+
+    public void Buy()
+    {
+        if (!CanBuy()) return;
+
+        if (NowEnemy)
+        {
+            Debug.Log($"Украдено {Data.EggType} яйцо!");
+            return;
+        }
+
+        if (!Data.HasSpawned)
+        {
+            Debug.Log($"Куплено {Data.EggType} яйцо за {_price} монет");
+            //_hasSpawned = true;
+        }
+        else
+        {
+            OpenEgg();
+        }
+    }
 
     public override string GetTextOnDisplay()
     {
-        var variant = $"<style=Variant{Variant}>{Variant}</style>\n";
-        if (Variant == Variant.Default) variant = "";
-        var rarity = $"<style=Rarity{Rarity}>{Rarity}</style>\n";
-        var name = $"{_name}\n";
-        var price = $"<style=Price>${Price}</style>\n";
+        if (Data.HasActiveTimer)
+            return Data.SpawnTimer > 0 ? $"{Data.SpawnTimer:F0} секунд" : "!";
+        else
+            if (Data.HasSpawned) return "";
 
-        string displayText =
-        variant +
-        rarity +
-        name +
-        price;
 
-        return displayText;
-    } 
+        var variant = $"<style=Variant{Data.Variant}>{Data.Variant}</style>\n";
+        if (Data.Variant == Variant.Default) variant = "";
+        var rarity = $"<style=Rarity{Data.Rarity}>{Data.Rarity}</style>\n";
+        var name = $"{Data.EggType} egg\n";
+        var price = $"<style=Price>${GetPrice()}</style>\n";
 
+        return variant + rarity + name + price;
+    }
+
+    public void ActivateTimer()
+    {
+        Data.HasActiveTimer = true;
+        TextDisplayEvents.RaiseDisplayEnabled(this);
+        StartCoroutine(Timer());
+    }
+
+    private IEnumerator Timer()
+    {
+        while (Data.SpawnTimer > 0)
+        {
+            yield return new WaitForSeconds(1f);
+            Data.SpawnTimer--;
+        }
+        Data.HasActiveTimer = false;
+    }
+
+
+    public void OpenEgg()
+    {
+        if (!string.IsNullOrEmpty(Data.UniqueId))
+        { 
+            LoadInitializer.Instance.SaveLoadManager.RemoveEggByUniqueId(Data.UniqueId);
+            LoadInitializer.Instance.SaveLoadManager.SaveEggsData();
+        }
+        
+        this.GetComponent<BrainrotSpawner>().Spawn(false);
+        Debug.Log($"Реализация открытия {Data.Rarity} яйца");
+    }
+
+    public override string GetItemID() => $"{Data.EggType}{Data.Rarity}{Data.Variant}";
+
+    // IConveyorMovable implementation
+    public void MoveToTargetOnConveyor(Vector3 target, float speed)
+    {
+        float step = speed * Time.fixedDeltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, target, step);
+    }
+
+    public void SetConveyor(IConveyor conveyor) => _currentConveyor = conveyor;
+
+    public override void OnReturnToPool()
+    {
+        IsOnConveyor = false;
+        _currentConveyor?.RemoveMovable(this);
+        _currentConveyor = null;
+            if (Data.HasSpawned)
+        _canBuy = false;
+    }
+
+    // private void SaveState()
+    // {
+    //     YG2.saves.SaveInt(_uniqueId + "_Rarity", (int)Rarity);
+    //     YG2.saves.SaveInt(_uniqueId + "_Variant", (int)Variant);
+    //     YG2.saves.SaveInt(_uniqueId + "_SpawnTimer", _spawnTimer);
+    //     YG2.saves.SaveInt(_uniqueId + "_HasActiveTimer", _hasActiveTimer ? 1 : 0);
+    //     YG2.saves.SaveInt(_uniqueId + "_HasSpawned", HasSpawned ? 1 : 0);
+    //     YG2.saves.SaveInt(_uniqueId + "_NowEnemy", _nowEnemy ? 1 : 0);
+        
+    //     YG2.saves.SaveFloat(_uniqueId + "_PositionX", transform.position.x);
+    //     YG2.saves.SaveFloat(_uniqueId + "_PositionY", transform.position.y);
+    //     YG2.saves.SaveFloat(_uniqueId + "_PositionZ", transform.position.z);
+    // }
+
+    // private void LoadState()
+    // {
+    //     Rarity = (Rarity)YG2.saves.LoadInt(_uniqueId + "_Rarity");
+    //     Variant = (Variant)YG2.saves.LoadInt(_uniqueId + "_Variant");
+    //     _spawnTimer = YG2.saves.LoadInt(_uniqueId + "_SpawnTimer");
+    //     _hasActiveTimer = YG2.saves.LoadInt(_uniqueId + "_HasActiveTimer") == 1;
+    //     HasSpawned = YG2.saves.LoadInt(_uniqueId + "_HasSpawned") == 1;
+    //     _nowEnemy = YG2.saves.LoadInt(_uniqueId + "_NowEnemy") == 1;
+        
+    //     float x = YG2.saves.LoadFloat(_uniqueId + "_PositionX");
+    //     float y = YG2.saves.LoadFloat(_uniqueId + "_PositionY");
+    //     float z = YG2.saves.LoadFloat(_uniqueId + "_PositionZ");
+    //     transform.position = new Vector3(x, y, z);
+    // }
 }

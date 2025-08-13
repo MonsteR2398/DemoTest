@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemsCollector : MonoBehaviour, ITriggerHandler
+public class ItemsCollector : ITriggerEnterHandler
 {
-    public void HandleTrigger(Collider other)
+    public void HandleTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<Item>(out var item))
             item.ReturnToPool();

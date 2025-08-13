@@ -1,0 +1,243 @@
+{
+    "intExample": 5,
+    "strExample": "Hello!",
+    "boolExample": [
+        false,
+        false,
+        false,
+        false
+    ],
+    "idSave": 9,
+    "intData": [
+        {
+            "key": "Eggs",
+            "value": 5
+        },
+        {
+            "key": "Egg_0_Id",
+            "value": 1
+        },
+        {
+            "key": "Egg_0_Rarity",
+            "value": 0
+        },
+        {
+            "key": "Egg_0_Variant",
+            "value": 2
+        },
+        {
+            "key": "Egg_0_HasSpawned",
+            "value": 1
+        },
+        {
+            "key": "Egg_0_HasActiveTimer",
+            "value": 0
+        },
+        {
+            "key": "Egg_1_Id",
+            "value": 2
+        },
+        {
+            "key": "Egg_1_Rarity",
+            "value": 0
+        },
+        {
+            "key": "Egg_1_Variant",
+            "value": 0
+        },
+        {
+            "key": "Egg_1_HasSpawned",
+            "value": 0
+        },
+        {
+            "key": "Egg_1_HasActiveTimer",
+            "value": 0
+        },
+        {
+            "key": "Egg_2_Id",
+            "value": 2
+        },
+        {
+            "key": "Egg_2_Rarity",
+            "value": 0
+        },
+        {
+            "key": "Egg_2_Variant",
+            "value": 0
+        },
+        {
+            "key": "Egg_2_HasSpawned",
+            "value": 1
+        },
+        {
+            "key": "Egg_2_HasActiveTimer",
+            "value": 0
+        },
+        {
+            "key": "Egg_3_Id",
+            "value": 2
+        },
+        {
+            "key": "Egg_3_Rarity",
+            "value": 0
+        },
+        {
+            "key": "Egg_3_Variant",
+            "value": 0
+        },
+        {
+            "key": "Egg_3_HasSpawned",
+            "value": 1
+        },
+        {
+            "key": "Egg_3_HasActiveTimer",
+            "value": 0
+        },
+        {
+            "key": "Egg_4_Id",
+            "value": 1
+        },
+        {
+            "key": "Egg_4_Rarity",
+            "value": 1
+        },
+        {
+            "key": "Egg_4_Variant",
+            "value": 1
+        },
+        {
+            "key": "Egg_4_HasSpawned",
+            "value": 1
+        },
+        {
+            "key": "Egg_4_HasActiveTimer",
+            "value": 0
+        }
+    ],
+    "longData": [
+        {
+            "key": "Egg_0_RemainingTime",
+            "value": 0
+        },
+        {
+            "key": "Egg_1_RemainingTime",
+            "value": 0
+        },
+        {
+            "key": "Egg_2_RemainingTime",
+            "value": 0
+        },
+        {
+            "key": "Egg_3_RemainingTime",
+            "value": 0
+        },
+        {
+            "key": "Egg_4_RemainingTime",
+            "value": 0
+        }
+    ],
+    "floatData": [
+        {
+            "key": "Egg_0_SpawnTimer",
+            "value": 1000.0
+        },
+        {
+            "key": "Egg_0_PositionX",
+            "value": -27.899879455566408
+        },
+        {
+            "key": "Egg_0_PositionY",
+            "value": 0.15841500461101533
+        },
+        {
+            "key": "Egg_0_PositionZ",
+            "value": -0.038504600524902347
+        },
+        {
+            "key": "Egg_1_SpawnTimer",
+            "value": 0.0
+        },
+        {
+            "key": "Egg_1_PositionX",
+            "value": 0.0
+        },
+        {
+            "key": "Egg_1_PositionY",
+            "value": 0.0
+        },
+        {
+            "key": "Egg_1_PositionZ",
+            "value": 0.0
+        },
+        {
+            "key": "Egg_2_SpawnTimer",
+            "value": 0.0
+        },
+        {
+            "key": "Egg_2_PositionX",
+            "value": -29.15407943725586
+        },
+        {
+            "key": "Egg_2_PositionY",
+            "value": 0.15841500461101533
+        },
+        {
+            "key": "Egg_2_PositionZ",
+            "value": 2.7864601612091066
+        },
+        {
+            "key": "Egg_3_SpawnTimer",
+            "value": 0.0
+        },
+        {
+            "key": "Egg_3_PositionX",
+            "value": -30.200824737548829
+        },
+        {
+            "key": "Egg_3_PositionY",
+            "value": 0.15841500461101533
+        },
+        {
+            "key": "Egg_3_PositionZ",
+            "value": -2.3763649463653566
+        },
+        {
+            "key": "Egg_4_SpawnTimer",
+            "value": 1000.0
+        },
+        {
+            "key": "Egg_4_PositionX",
+            "value": -25.976879119873048
+        },
+        {
+            "key": "Egg_4_PositionY",
+            "value": 0.15841500461101533
+        },
+        {
+            "key": "Egg_4_PositionZ",
+            "value": 0.4365401268005371
+        }
+    ],
+    "stringData": [
+        {
+            "key": "Egg_0_UniqueId",
+            "value": "c2cd5c25-d22c-4079-8589-6f843d08f7c2"
+        },
+        {
+            "key": "Egg_1_UniqueId",
+            "value": "5258f458-3f1b-4a08-ae74-734fc6ed2ccc"
+        },
+        {
+            "key": "Egg_2_UniqueId",
+            "value": "27d0e119-303e-4995-8b93-171b79a57894"
+        },
+        {
+            "key": "Egg_3_UniqueId",
+            "value": "18761e7e-dfa3-430e-b48f-72b7916c60f8"
+        },
+        {
+            "key": "Egg_4_UniqueId",
+            "value": "42aab558-7858-43cb-b115-9f057629df4a"
+        }
+    ]
+}
