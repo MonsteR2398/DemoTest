@@ -72,6 +72,7 @@ public class LoadInitializer : MonoBehaviour
         var brainrotsData = SaveLoadManager.BrainrotsData;
         for (int i = 0; i < brainrotsData.Count; i++)
         {
+        Debug.Log(brainrotsData[i].Position);
             Vector3 position = brainrotsData[i].Position;
             Brainrot prefab = brainrotPrefabs.FirstOrDefault(brainrot => brainrot.Data.Id == brainrotsData[i].Id);
             if (prefab == null)

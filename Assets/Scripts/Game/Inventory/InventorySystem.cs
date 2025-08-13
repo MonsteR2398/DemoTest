@@ -61,6 +61,7 @@ public class InventorySystem : MonoBehaviour
         {
             if (needSave)
             {
+                rot.Data.HasSpawned = false;
                 LoadInitializer.Instance.SaveLoadManager.AddBrainrotData(rot.Data);
                 LoadInitializer.Instance.SaveLoadManager.SaveBrainrotsData();
             }

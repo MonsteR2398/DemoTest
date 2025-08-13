@@ -7,15 +7,15 @@
         false,
         false
     ],
-    "idSave": 9,
+    "idSave": 8,
     "intData": [
         {
             "key": "Eggs",
-            "value": 5
+            "value": 1
         },
         {
             "key": "Egg_0_Id",
-            "value": 1
+            "value": 3
         },
         {
             "key": "Egg_0_Rarity",
@@ -23,7 +23,7 @@
         },
         {
             "key": "Egg_0_Variant",
-            "value": 2
+            "value": 0
         },
         {
             "key": "Egg_0_HasSpawned",
@@ -35,7 +35,7 @@
         },
         {
             "key": "Egg_1_Id",
-            "value": 2
+            "value": 1
         },
         {
             "key": "Egg_1_Rarity",
@@ -47,71 +47,35 @@
         },
         {
             "key": "Egg_1_HasSpawned",
-            "value": 0
+            "value": 1
         },
         {
             "key": "Egg_1_HasActiveTimer",
             "value": 0
         },
         {
-            "key": "Egg_2_Id",
-            "value": 2
-        },
-        {
-            "key": "Egg_2_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Egg_2_Variant",
-            "value": 0
-        },
-        {
-            "key": "Egg_2_HasSpawned",
+            "key": "Brainrots",
             "value": 1
         },
         {
-            "key": "Egg_2_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_3_Id",
-            "value": 2
-        },
-        {
-            "key": "Egg_3_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Egg_3_Variant",
-            "value": 0
-        },
-        {
-            "key": "Egg_3_HasSpawned",
+            "key": "Brainrot_0_Id",
             "value": 1
         },
         {
-            "key": "Egg_3_HasActiveTimer",
+            "key": "Brainrot_0_Rarity",
+            "value": 1
+        },
+        {
+            "key": "Brainrot_0_Variant",
             "value": 0
         },
         {
-            "key": "Egg_4_Id",
-            "value": 1
+            "key": "Brainrot_0_Income",
+            "value": 10
         },
         {
-            "key": "Egg_4_Rarity",
+            "key": "Brainrot_0_HasSpawned",
             "value": 1
-        },
-        {
-            "key": "Egg_4_Variant",
-            "value": 1
-        },
-        {
-            "key": "Egg_4_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Egg_4_HasActiveTimer",
-            "value": 0
         }
     ],
     "longData": [
@@ -122,18 +86,6 @@
         {
             "key": "Egg_1_RemainingTime",
             "value": 0
-        },
-        {
-            "key": "Egg_2_RemainingTime",
-            "value": 0
-        },
-        {
-            "key": "Egg_3_RemainingTime",
-            "value": 0
-        },
-        {
-            "key": "Egg_4_RemainingTime",
-            "value": 0
         }
     ],
     "floatData": [
@@ -143,7 +95,7 @@
         },
         {
             "key": "Egg_0_PositionX",
-            "value": -27.899879455566408
+            "value": -29.612712860107423
         },
         {
             "key": "Egg_0_PositionY",
@@ -151,93 +103,53 @@
         },
         {
             "key": "Egg_0_PositionZ",
-            "value": -0.038504600524902347
+            "value": -0.8855547308921814
         },
         {
             "key": "Egg_1_SpawnTimer",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_1_PositionX",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_1_PositionY",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_1_PositionZ",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_2_SpawnTimer",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_2_PositionX",
-            "value": -29.15407943725586
-        },
-        {
-            "key": "Egg_2_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Egg_2_PositionZ",
-            "value": 2.7864601612091066
-        },
-        {
-            "key": "Egg_3_SpawnTimer",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_3_PositionX",
-            "value": -30.200824737548829
-        },
-        {
-            "key": "Egg_3_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Egg_3_PositionZ",
-            "value": -2.3763649463653566
-        },
-        {
-            "key": "Egg_4_SpawnTimer",
             "value": 1000.0
         },
         {
-            "key": "Egg_4_PositionX",
-            "value": -25.976879119873048
+            "key": "Egg_1_PositionX",
+            "value": -29.011775970458986
         },
         {
-            "key": "Egg_4_PositionY",
+            "key": "Egg_1_PositionY",
             "value": 0.15841500461101533
         },
         {
-            "key": "Egg_4_PositionZ",
-            "value": 0.4365401268005371
+            "key": "Egg_1_PositionZ",
+            "value": 3.9541778564453127
+        },
+        {
+            "key": "Brainrot_0_Size",
+            "value": 1.0
+        },
+        {
+            "key": "Brainrot_0_PositionX",
+            "value": -29.011775970458986
+        },
+        {
+            "key": "Brainrot_0_PositionY",
+            "value": 0.15841500461101533
+        },
+        {
+            "key": "Brainrot_0_PositionZ",
+            "value": 3.9541778564453127
         }
     ],
     "stringData": [
         {
             "key": "Egg_0_UniqueId",
-            "value": "c2cd5c25-d22c-4079-8589-6f843d08f7c2"
+            "value": "e2d28aa3-9eb6-4a88-9c2d-47c7e14f6570"
         },
         {
             "key": "Egg_1_UniqueId",
-            "value": "5258f458-3f1b-4a08-ae74-734fc6ed2ccc"
+            "value": "858cfd19-20f3-44c9-9b1f-ea3372eda5f1"
         },
         {
-            "key": "Egg_2_UniqueId",
-            "value": "27d0e119-303e-4995-8b93-171b79a57894"
-        },
-        {
-            "key": "Egg_3_UniqueId",
-            "value": "18761e7e-dfa3-430e-b48f-72b7916c60f8"
-        },
-        {
-            "key": "Egg_4_UniqueId",
-            "value": "42aab558-7858-43cb-b115-9f057629df4a"
+            "key": "Brainrot_0_UniqueId",
+            "value": "5f61d9d6-3c74-42da-983d-ddcb8780241d"
         }
     ]
 }

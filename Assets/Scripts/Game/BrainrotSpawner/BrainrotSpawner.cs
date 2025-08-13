@@ -36,6 +36,7 @@ public class BrainrotSpawner : MonoBehaviour
         Brainrot brainrot = Instantiate((Brainrot)spawnerConfig.GetRandomItem(), transform.position, Quaternion.identity);
         if (_nowEnemy) brainrot.NowEnemy = _nowEnemy;
         brainrot.Data.Rarity = spawnerConfig.GetRandomRarity();
+        brainrot.OnSpawnToGround();
         float size = GetRandomSize();
         brainrot.SetSize(size);
         if (needSave)

@@ -73,9 +73,12 @@ public class SaveLoadManager : MonoBehaviour
             YG2.saves.SaveInt("Brainrot_" + i + "_Variant", (int)BrainrotsData[i].Variant);
             YG2.saves.SaveInt("Brainrot_" + i + "_Income", BrainrotsData[i].Income);
             YG2.saves.SaveFloat("Brainrot_" + i + "_Size", BrainrotsData[i].Size);
+            YG2.saves.SaveInt("Brainrot_" + i + "_HasSpawned", BrainrotsData[i].HasSpawned ? 1: 0);
             YG2.saves.SaveFloat("Brainrot_" + i + "_PositionX", BrainrotsData[i].Position.x);
             YG2.saves.SaveFloat("Brainrot_" + i + "_PositionY", BrainrotsData[i].Position.y);
             YG2.saves.SaveFloat("Brainrot_" + i + "_PositionZ", BrainrotsData[i].Position.z);
+            Debug.Log(BrainrotsData[i].HasSpawned);
+
         }
         YG2.SaveProgress();
     }
@@ -97,7 +100,6 @@ public class SaveLoadManager : MonoBehaviour
                 YG2.saves.LoadFloat("Egg_" + i + "_PositionX"),
                 YG2.saves.LoadFloat("Egg_" + i + "_PositionY"),
                 YG2.saves.LoadFloat("Egg_" + i + "_PositionZ"));
-
             EggsData.Add(data);
         }
     }
@@ -113,12 +115,13 @@ public class SaveLoadManager : MonoBehaviour
             data.Rarity = (Rarity)YG2.saves.LoadInt("Brainrot_" + i + "_Rarity");
             data.Variant = (Variant)YG2.saves.LoadInt("Brainrot_" + i + "_Variant");
             data.Income = YG2.saves.LoadInt("Brainrot_" + i + "_Income");
+            data.HasSpawned = YG2.saves.LoadInt("Brainrot_" + i + "_HasSpawned") == 1;
             data.Size = YG2.saves.LoadFloat("Brainrot_" + i + "_Size");
             data.Position = new Vector3(
                 YG2.saves.LoadFloat("Brainrot_" + i + "_PositionX"),
                 YG2.saves.LoadFloat("Brainrot_" + i + "_PositionY"),
                 YG2.saves.LoadFloat("Brainrot_" + i + "_PositionZ"));
-
+            Debug.Log(data.HasSpawned);
             BrainrotsData.Add(data);
         }
     }

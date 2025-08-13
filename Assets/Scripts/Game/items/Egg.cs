@@ -121,12 +121,9 @@ public class Egg : Item, IConveyorMovable, ITimer, IBuyable, ISpawned
     public void OpenEgg()
     {
         if (!string.IsNullOrEmpty(Data.UniqueId))
-        { 
             LoadInitializer.Instance.SaveLoadManager.RemoveEggByUniqueId(Data.UniqueId);
-            LoadInitializer.Instance.SaveLoadManager.SaveEggsData();
-        }
         
-        this.GetComponent<BrainrotSpawner>().Spawn(false);
+        this.GetComponent<BrainrotSpawner>().Spawn();
         Debug.Log($"Реализация открытия {Data.Rarity} яйца");
     }
 

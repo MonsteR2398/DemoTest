@@ -136,12 +136,14 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IDragHandler, I
             if (_phantomItem is Egg egg)
             {
                 LoadInitializer.Instance.SaveLoadManager.RemoveEggByUniqueId(egg.Data.UniqueId);
+                egg.Data.HasSpawned = true;
                 LoadInitializer.Instance.SaveLoadManager.AddEggData(egg.Data);
                 LoadInitializer.Instance.SaveLoadManager.SaveEggsData();
             }
             else if (_phantomItem is Brainrot brainrot)
             {
                 LoadInitializer.Instance.SaveLoadManager.RemoveBrainrotByUniqueId(brainrot.Data.UniqueId);
+                brainrot.Data.HasSpawned = true;
                 LoadInitializer.Instance.SaveLoadManager.AddBrainrotData(brainrot.Data);
                 LoadInitializer.Instance.SaveLoadManager.SaveBrainrotsData();
             }
