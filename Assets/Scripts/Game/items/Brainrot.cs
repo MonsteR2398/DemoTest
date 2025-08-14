@@ -13,7 +13,6 @@ public class BrainrotData
     [HideInInspector] public bool HasSpawned;
     [HideInInspector] public Vector3 Position;
 
-
     public string SetUniqueId(string value) => UniqueId = value;
     public void AddUniqueId()
     {
@@ -35,9 +34,13 @@ public class Brainrot : Item, ITriggerEnterHandler, ISoundEmitter, ISpawned
     private int _totalIncome;
     private Coroutine incomeRoutine;
 
+    [Header("Material Settings")]
+    [SerializeField] private VariantMaterialsConfig materialConfig;
+
+
     public AudioClip Clip => _clip;
     int ISoundEmitter.SoundInterval { get => _soundRepeatInterval; set => _soundRepeatInterval = value; }
-    
+
     public bool HasSpawned
     {
         get => Data.HasSpawned;
@@ -53,6 +56,8 @@ public class Brainrot : Item, ITriggerEnterHandler, ISoundEmitter, ISpawned
     public void Initialize()
     {
         FlipToGlobalXPos();
+        SetMaterials();
+        Data.Income += MultipleValues(Data.Income);
         if (!NowEnemy)
         {
             TextDisplayEvents.RaiseDisplayEnabled(this);
@@ -65,7 +70,7 @@ public class Brainrot : Item, ITriggerEnterHandler, ISoundEmitter, ISpawned
         if (!NowEnemy)
         {
             TextDisplayEvents.RaiseDisplayDisabled(this);
-            if(incomeRoutine != null)
+            if (incomeRoutine != null)
                 StopCoroutine(incomeRoutine);
         }
         _animator.StopPlayback();
@@ -82,6 +87,30 @@ public class Brainrot : Item, ITriggerEnterHandler, ISoundEmitter, ISpawned
     {
         if (HasSpawned)
             _canBuy = false;
+    }
+
+    public void SetMaterials()
+    {
+        if (materialConfig == null) return;
+
+        Material newMaterial = materialConfig.GetMaterial(Data.Variant);
+        if (newMaterial == null) return;
+
+        Renderer[] allRenderers = GetComponentsInChildren<Renderer>(true);
+        foreach (Renderer renderer in allRenderers)
+        {
+            Material[] sharedMaterials = renderer.sharedMaterials;
+            for (int i = 0; i < sharedMaterials.Length; i++)
+                sharedMaterials[i] = newMaterial;
+            
+            renderer.sharedMaterials = sharedMaterials;
+        }
+    }
+
+    private int MultipleValues(int value)
+    {
+        int incomeMulti = (int)Mathf.Floor(value * Data.Size) * (int)Data.Variant;
+        return incomeMulti;
     }
 
     private IEnumerator IncomeComing()
@@ -102,13 +131,26 @@ public class Brainrot : Item, ITriggerEnterHandler, ISoundEmitter, ISpawned
 
     public void SetSize(float size)
     {
-        Data.Size = size;
+        Data.Size = Mathf.Round(size * 100f) / 100f;
+        _displayOffset += new Vector3(0f, size, 0f);
         transform.localScale = Vector3.one * size;
+    }
+    public override string GetItemID()
+    {
+        if (Data.UniqueId == "")
+            Data.AddUniqueId();
+        return Data.UniqueId;
     }
 
     public override Variant GetVariant() => Data.Variant;
 
     public float GetSize() => Data.Size;
+    public override int GetPrice()
+    {
+        var price = base.GetPrice();
+        var multi = MultipleValues(price);
+        return multi;
+    }
 
     public override string GetTextOnDisplay()
     {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -79,7 +80,21 @@ public class SaleStoreSystem : MonoBehaviour
             }
             itemSlot.transform.gameObject.SetActive(true);
             itemSlot.IconImage.sprite = slot.ItemIcon.sprite;
-            itemSlot.ItemSizeText.text = slot.ItemSize.ToString();
+
+            if (slot.BackgroundIcon.gameObject.activeSelf)
+            {
+                itemSlot.BackgroundImage.enabled = true;
+                itemSlot.BackgroundImage.sprite = slot.BackgroundIcon.sprite;
+                itemSlot.BackgroundImage.color = slot.BackgroundIcon.color;
+            }
+            else
+            {
+                itemSlot.BackgroundImage.enabled = false;
+            }
+
+
+
+            itemSlot.ItemSizeText.text = $"({slot.ItemSize} ft.)";
             itemSlot.NameText.text = slot.GetItem().GetName();
             itemSlot.PriceText.text = slot.GetItem().GetPrice().ToString();
             itemSlot.Slot = slot;

@@ -79,7 +79,6 @@ public class Egg : Item, IConveyorMovable, ITimer, IBuyable, ISpawned
         if (!Data.HasSpawned)
         {
             Debug.Log($"Куплено {Data.EggType} яйцо за {_price} монет");
-            //_hasSpawned = true;
         }
         else
         {

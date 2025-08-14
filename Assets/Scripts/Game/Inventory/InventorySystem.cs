@@ -64,19 +64,22 @@ public class InventorySystem : MonoBehaviour
                 LoadInitializer.Instance.SaveLoadManager.AddBrainrotData(rot.Data);
                 LoadInitializer.Instance.SaveLoadManager.SaveBrainrotsData();
             }
+            GetNewSlot(rot, count);
+            return;
         }
-        
+
         if (_slots.TryGetValue(itemToAdd.GetItemID(), out InventorySlot slot))
-        {
             slot.AddCount(count);
-        }
         else
-        {
-            GameObject slotObj = Instantiate(slotPrefab, inventoryPanel);
-            InventorySlot newSlot = slotObj.GetComponent<InventorySlot>();
-            newSlot.Initialize(itemToAdd, count);
-            _slots.Add(itemToAdd.GetItemID(), newSlot);
-        }
+            GetNewSlot(itemToAdd, count);
+    }
+
+    private void GetNewSlot(Item item, int count)
+    { 
+         GameObject slotObj = Instantiate(slotPrefab, inventoryPanel);
+        InventorySlot newSlot = slotObj.GetComponent<InventorySlot>();
+        newSlot.Initialize(item, count);
+        _slots.Add(item.GetItemID(), newSlot);
     }
     
     public void RemoveSlot(string itemID)

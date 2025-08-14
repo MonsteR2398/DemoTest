@@ -155,7 +155,7 @@ public class ItemCanvasSystem : MonoBehaviour
             displayData.TextDisplay.Text = display.GetTextOnDisplay();
 
             if (display is MonoBehaviour monoBehaviour)
-                displayData.TextDisplay.SetPosition(monoBehaviour.transform.position, _textOffset);
+                displayData.TextDisplay.SetPosition(monoBehaviour.transform.position, display.DisplayOffset);
 
             displayData.Display = display;
         }

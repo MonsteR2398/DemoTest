@@ -6,13 +6,32 @@ public class MissingItemShop : MonoBehaviour
 {
     [SerializeField] private MissingItemData _missingItemPrefab;
     [SerializeField] private Transform _parent;
+    [SerializeField] private GameObject _shopPanel;
     [SerializeField] private MissingItemViewer _viewer;
     private Queue<MissingItemData> _itemPool = new Queue<MissingItemData>();
     private List<MissingItemData> _activeItems = new List<MissingItemData>();
 
     void Start()
     {
+        if (_shopPanel == null)
+            _shopPanel = transform.GetChild(0).gameObject;
         StartCoroutine(UpdateEverySecondCoroutine());
+    }
+    
+    void OnEnable()
+    { 
+        MissingShopTriggerEvent.OnMissingShopTriggerEnter += OpenShop;
+        MissingShopTriggerEvent.OnMissingShopTriggerExit += CloseShop;
+    }
+    void OnDisable()
+    {
+        MissingShopTriggerEvent.OnMissingShopTriggerEnter -= OpenShop;
+        MissingShopTriggerEvent.OnMissingShopTriggerExit -= CloseShop; 
+    }
+    void OnDestroy()
+    {
+        MissingShopTriggerEvent.OnMissingShopTriggerEnter -= OpenShop;
+        MissingShopTriggerEvent.OnMissingShopTriggerExit -= CloseShop;
     }
 
     public void AddItemInShop(Item item)
@@ -29,12 +48,15 @@ public class MissingItemShop : MonoBehaviour
         newItem.Button.onClick.RemoveAllListeners();
         newItem.Button.onClick.AddListener(() => BuyItem(item));
         newItem.gameObject.SetActive(true);
-        
+
         _activeItems.Add(newItem);
-        
+
         if (_viewer != null)
             newItem.Viewer = _viewer.AddViewerToItem(item);
     }
+
+    void CloseShop() => _shopPanel.SetActive(false);
+    void OpenShop() => _shopPanel.SetActive(true);
     // public List<Item> GetActiveItems()
     // {
     //     List<Item> items = new List<Item>();
@@ -59,7 +81,7 @@ public class MissingItemShop : MonoBehaviour
                 {
                     if (_viewer != null)
                         _viewer.RemoveItemFromViewer(item.Viewer);
-                    
+
                     item.gameObject.SetActive(false);
                     _itemPool.Enqueue(item);
                     _activeItems.RemoveAt(i);

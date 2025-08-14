@@ -15,6 +15,8 @@ public class BillboardUIEvents : MonoBehaviour, IObjectTextDisplay
 
     private Coroutine timerCoroutine;
 
+    public Vector3 DisplayOffset => throw new NotImplementedException();
+
     private void OnEnable()
     {
         TextDisplayEvents.RaiseDisplayEnabled(this);

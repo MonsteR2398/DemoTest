@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
 public class InventorySlot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
@@ -56,15 +57,26 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IDragHandler, I
     private void UpdateUI()
     {
         ItemIcon.enabled = _count > 0;
-        if (_count > 1)
+        switch (_item)
         {
-            CountText.text = _count.ToString();
-            CountText.enabled = true;
+            case Egg egg:
+                CountText.text = $"x{_count}";
+                break;
+            case Brainrot rot:
+                CountText.text = $"${rot.Data.Income}/s"; 
+                break;
+            default:
+                CountText.enabled = false;
+                break;
         }
-        else
-        {
-            CountText.enabled = false;
-        }
+
+        // if (_item is Brainrot rot)
+        //     CountText.text = $"${rot.Data.Income}/s";
+        // else if (_item is Egg egg)
+        //     CountText.text = _count.ToString();
+        // else
+        //     CountText.enabled = false;
+
     }
 
     public void OnPointerDown(PointerEventData eventData)

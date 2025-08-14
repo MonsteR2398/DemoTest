@@ -7,7 +7,7 @@ public class Item : PoolableMono<Item>, IObjectTextDisplay
     [SerializeField] protected int _price;
 
     [SerializeField] protected Vector3 _displayOffset;
-
+    public Vector3 DisplayOffset => _displayOffset;
     [SerializeField] protected Sprite _icon;
     protected bool _canBuy = true;
     public bool NowEnemy = false;
@@ -20,7 +20,6 @@ public class Item : PoolableMono<Item>, IObjectTextDisplay
     public override void OnGetFromPool()
     {
     }
-
     public virtual Variant GetVariant() => Variant.Default;
     public Color GetColorWithVariant(Variant variant)
     {

@@ -52,19 +52,19 @@ MonoBehaviour:
   _price: 50
   _displayOffset: {x: 0, y: 1, z: 0}
   _icon: {fileID: 21300000, guid: 421f7ccfa86e2ad44a824a8d96aed059, type: 3}
-  HasSpawned: 0
   NowEnemy: 0
   Data:
-    UniqueId: 
     Id: 1
     Income: 10
     Rarity: 0
     Variant: 0
     Size: 0
+    HasSpawned: 0
     Position: {x: 0, y: 0, z: 0}
   _clip: {fileID: 8300000, guid: b8cd59a0291e3d64991a8df41c63504c, type: 3}
   _soundRepeatInterval: 0
   _animator: {fileID: 2933934799376907827}
+  materialConfig: {fileID: 11400000, guid: b1dd08a1574269743850dc51b2364ed7, type: 2}
 --- !u!65 &8356793645153159870
 BoxCollider:
   m_ObjectHideFlags: 0
