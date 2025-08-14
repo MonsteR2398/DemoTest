@@ -23,7 +23,6 @@ public class Item : PoolableMono<Item>, IObjectTextDisplay
     public virtual Variant GetVariant() => Variant.Default;
     public Color GetColorWithVariant(Variant variant)
     {
-        Debug.Log(variant);
         switch (variant)
         {
             case Variant.Golden: return new Color(1f, 0.85f, 0f);

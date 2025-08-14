@@ -27,7 +27,9 @@ public class Brainrot : Item, ITriggerEnterHandler, ISoundEmitter, ISpawned
 
     [Header("Sound Settings")]
     [SerializeField] private AudioClip _clip;
-    [SerializeField] private int _soundRepeatInterval;
+    [SerializeField] private float _soundRepeatInterval;
+    [SerializeField] private float _phaseOffset;
+    [SerializeField] private float _nextPlayTime;
 
     [Header("Animation Settings")]
     [SerializeField] private Animator _animator;
@@ -38,20 +40,20 @@ public class Brainrot : Item, ITriggerEnterHandler, ISoundEmitter, ISpawned
     [SerializeField] private VariantMaterialsConfig materialConfig;
 
 
-    public AudioClip Clip => _clip;
-    int ISoundEmitter.SoundInterval { get => _soundRepeatInterval; set => _soundRepeatInterval = value; }
-
     public bool HasSpawned
     {
         get => Data.HasSpawned;
         set => Data.HasSpawned = value;
     }
+    public AudioClip Clip => _clip;
+    public float NextPlayTime { get => _nextPlayTime; set => _nextPlayTime = value; }
+    public float Interval { get => _soundRepeatInterval; set => _soundRepeatInterval = value; }
+    public float phaseOffset { get => _phaseOffset; set => _phaseOffset = value; }
 
     private void Start()
     {
         Initialize();
     }
-
 
     public void Initialize()
     {

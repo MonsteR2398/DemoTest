@@ -61,8 +61,9 @@ MonoBehaviour:
     Size: 0
     HasSpawned: 0
     Position: {x: 0, y: 0, z: 0}
-  _clip: {fileID: 8300000, guid: b8cd59a0291e3d64991a8df41c63504c, type: 3}
+  _clip: {fileID: 8300000, guid: e3972e85d65d3f0489e18f757cec95e6, type: 3}
   _soundRepeatInterval: 0
+  _phaseOffset: 0
   _animator: {fileID: 4806681214343355984}
   materialConfig: {fileID: 11400000, guid: b1dd08a1574269743850dc51b2364ed7, type: 2}
 --- !u!65 &8356793645153159870
@@ -84,7 +85,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 0.01, z: 1}
+  m_Size: {x: 0.52, y: 0.01, z: 0.9}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8662062692574409402
 MonoBehaviour:
@@ -146,7 +147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f7f33cdc9d49ed44aa96896bd156e4d1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.089
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f7f33cdc9d49ed44aa96896bd156e4d1, type: 3}
       propertyPath: m_LocalRotation.w

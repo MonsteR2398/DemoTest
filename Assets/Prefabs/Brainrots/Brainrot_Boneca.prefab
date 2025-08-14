@@ -61,8 +61,9 @@ MonoBehaviour:
     Size: 0
     HasSpawned: 0
     Position: {x: 0, y: 0, z: 0}
-  _clip: {fileID: 8300000, guid: 77e93b187bedde7469c2d609db1de139, type: 3}
-  _soundRepeatInterval: 0
+  _clip: {fileID: 8300000, guid: bdb02d7ee2572ec4a9bab9ae995fb366, type: 3}
+  _soundRepeatInterval: 4
+  _phaseOffset: 0
   _animator: {fileID: 1668795328441403147}
   materialConfig: {fileID: 11400000, guid: b1dd08a1574269743850dc51b2364ed7, type: 2}
 --- !u!65 &3773553545374075551
@@ -84,7 +85,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 0.01, z: 1}
+  m_Size: {x: 0.4, y: 0.01, z: 0.6}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8318689309588365074
 MonoBehaviour:
