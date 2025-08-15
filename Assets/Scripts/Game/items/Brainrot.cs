@@ -49,7 +49,6 @@ public class Brainrot : Item, ITriggerEnterHandler, ISpawned
     private void Start()
     {
         Initialize();
-        Debug.Log(Data.Size, gameObject);
     }
 
     public void Initialize()

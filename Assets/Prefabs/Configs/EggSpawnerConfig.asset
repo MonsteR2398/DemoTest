@@ -14,27 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rarityChances:
   - rarity: 0
-    chance: 70
-  - rarity: 4
-    chance: 0.1
+    chance: 50
   - rarity: 1
-    chance: 24
+    chance: 20
+  - rarity: 0
+    chance: 15
   - rarity: 2
     chance: 5
   - rarity: 3
-    chance: 1
+    chance: 3
   - rarity: 4
-    chance: 0.1
+    chance: 1
+  - rarity: 5
+    chance: 1
   variantChances:
   - variant: 0
     chance: 80
   - variant: 1
-    chance: 100
+    chance: 15
   - variant: 2
-    chance: 100
+    chance: 5
   items:
   - item: {fileID: 1395894421293141232, guid: 374f7fd9bb080f04886998bc093e55a6, type: 3}
-    chance: 64
+    chance: 50
   - item: {fileID: 5567011161062349468, guid: 7870b9aa32fad4e4080167259c578ec3, type: 3}
     chance: 20
   - item: {fileID: 2186258401776071871, guid: 29455ee108b31964ea57c96dd8517d0a, type: 3}
@@ -42,7 +44,7 @@ MonoBehaviour:
   - item: {fileID: 2208000878831020157, guid: 3f90ba49d79021843b95e3f2936a44bd, type: 3}
     chance: 5
   - item: {fileID: 6387479161699131746, guid: 54338ad752e17bf45a330d4a681d0fe1, type: 3}
-    chance: 1
+    chance: 2
   - item: {fileID: 135519534535753490, guid: b51de88d8c17ebe4090d25effa9c303f, type: 3}
     chance: 0
   - item: {fileID: 2399870032094642591, guid: 9804add0b45b9234bbacd3c2346f9d11, type: 3}

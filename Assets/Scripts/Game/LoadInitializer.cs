@@ -49,6 +49,8 @@ public class LoadInitializer : MonoBehaviour
             // заменить на пул
             Egg egg = Instantiate(prefab, position, Quaternion.identity);
             egg.Data.SetUniqueId(eggsData[i].UniqueId);
+
+            Debug.Log(egg.Data.UniqueId + "??");
             egg.Data.Rarity = eggsData[i].Rarity;
             egg.Data.Variant = eggsData[i].Variant;
             egg.Data.HasActiveTimer = eggsData[i].HasActiveTimer;

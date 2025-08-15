@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7024179421205080375}
   - component: {fileID: 2208000878831020157}
+  - component: {fileID: -175582354942283246}
+  - component: {fileID: 1465729313974361235}
   m_Layer: 0
   m_Name: Egg 4
   m_TagString: Untagged
@@ -46,14 +48,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemName: 
-  _price: 0
+  _price: 25000
   _displayOffset: {x: 0, y: 4, z: 0}
   _icon: {fileID: -149917496, guid: b820f2578ccd4fc4a848cb5f67493243, type: 3}
   NowEnemy: 0
   Data:
     Id: 4
     EggType: 3
-    OpenPrice: 0
+    OpenPrice: 25000
     HasActiveTimer: 0
     SpawnTimer: 1000
     HasSpawned: 0
@@ -61,6 +63,84 @@ MonoBehaviour:
     Rarity: 0
     Variant: 0
     LastSaveTimeString: 
+--- !u!114 &-175582354942283246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5130682991421610995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac47a9f9a8d7fe146b7f6b59522201cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseSizeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.90833306
+      value: 0.073113576
+      inSlope: 0.36945808
+      outSlope: 0.36945808
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9303964
+      value: 0.17531724
+      inSlope: 0.75871825
+      outSlope: 0.75871825
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0.5982361
+      inSlope: 1.6037737
+      outSlope: 1.6037737
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.07499999
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spawnerConfig: {fileID: 11400000, guid: bd0f72ae0541a3f4ebe5fb185eb37ba1, type: 2}
+  _nowEnemy: 0
+  chanceMultiplier: 1
+--- !u!65 &1465729313974361235
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5130682991421610995}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.01, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1345999796404205906
 PrefabInstance:
   m_ObjectHideFlags: 0

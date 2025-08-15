@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2393680363683838525}
   - component: {fileID: 2399870032094642591}
+  - component: {fileID: 7573811598307168401}
+  - component: {fileID: -4848000200113935355}
   m_Layer: 0
   m_Name: Egg 7
   m_TagString: Untagged
@@ -46,14 +48,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemName: 
-  _price: 0
+  _price: 350000
   _displayOffset: {x: 0, y: 4, z: 0}
   _icon: {fileID: 2103502724, guid: b820f2578ccd4fc4a848cb5f67493243, type: 3}
   NowEnemy: 0
   Data:
     Id: 7
     EggType: 7
-    OpenPrice: 0
+    OpenPrice: 350000
     HasActiveTimer: 0
     SpawnTimer: 1000
     HasSpawned: 0
@@ -61,6 +63,75 @@ MonoBehaviour:
     Rarity: 0
     Variant: 0
     LastSaveTimeString: 
+--- !u!114 &7573811598307168401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997556254510976588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac47a9f9a8d7fe146b7f6b59522201cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseSizeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.561425
+      value: 0.31519803
+      inSlope: 1.12285
+      outSlope: 1.12285
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spawnerConfig: {fileID: 11400000, guid: c1d259e11564a414db57b952cd01e870, type: 2}
+  _nowEnemy: 0
+  chanceMultiplier: 1
+--- !u!65 &-4848000200113935355
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997556254510976588}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 0.01, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &6205763996637305166
 PrefabInstance:
   m_ObjectHideFlags: 0

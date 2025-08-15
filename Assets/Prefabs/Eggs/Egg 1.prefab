@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1183405291715433112}
   - component: {fileID: 1395894421293141232}
   - component: {fileID: 4071952905013793057}
+  - component: {fileID: 3417982662424893773}
   m_Layer: 0
   m_Name: Egg 1
   m_TagString: Untagged
@@ -54,7 +55,7 @@ MonoBehaviour:
   Data:
     Id: 1
     EggType: 0
-    OpenPrice: 0
+    OpenPrice: 100
     HasActiveTimer: 0
     SpawnTimer: 1000
     HasSpawned: 0
@@ -119,6 +120,27 @@ MonoBehaviour:
   spawnerConfig: {fileID: 11400000, guid: d4d4d7bb4df5c6942912a9dcd8147cf8, type: 2}
   _nowEnemy: 0
   chanceMultiplier: 1
+--- !u!65 &3417982662424893773
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952806312831558110}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.01, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &9187902022527647761
 PrefabInstance:
   m_ObjectHideFlags: 0

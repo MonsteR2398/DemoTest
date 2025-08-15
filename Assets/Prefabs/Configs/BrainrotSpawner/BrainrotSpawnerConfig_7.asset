@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 079effb69f9f5954d9662a6dfefe1927, type: 3}
+  m_Name: BrainrotSpawnerConfig_7
+  m_EditorClassIdentifier: 
+  rarityChances:
+  - rarity: 0
+    chance: 5
+  - rarity: 1
+    chance: 5
+  - rarity: 2
+    chance: 10
+  - rarity: 3
+    chance: 20
+  - rarity: 4
+    chance: 20
+  - rarity: 5
+    chance: 40
+  variantChances: []
+  items:
+  - item: {fileID: 8937121926740347584, guid: fa9f942377c254e4d91698c028aefa04, type: 3}
+    chance: 27
+  - item: {fileID: 8937121926740347584, guid: 478c60e0c48f03c4883bdf9ab2b2fd72, type: 3}
+    chance: 25
+  - item: {fileID: 8937121926740347584, guid: 4f2119a4c12b04b499e7dee2a2d0ea8b, type: 3}
+    chance: 23
+  - item: {fileID: 8937121926740347584, guid: 9e738da05cbcecf49b0a44d7bc47eef8, type: 3}
+    chance: 21
+  - item: {fileID: 8937121926740347584, guid: 3eea230cb5f94ae47910815eedeb1935, type: 3}
+    chance: 6
+  - item: {fileID: 8937121926740347584, guid: 5ac19226cccdd81478b855ac44e4c0a7, type: 3}
+    chance: 6
+  - item: {fileID: 8937121926740347584, guid: 6dc3ddbca048df441bba3c16fae620b2, type: 3}
+    chance: 6
+  - item: {fileID: 8937121926740347584, guid: 20d4adf4dd27dab46adadbf44e7e807d, type: 3}
+    chance: 6
+  - item: {fileID: 8937121926740347584, guid: 3cc649c72de91194391135e6ca97f4fd, type: 3}
+    chance: 6
+  - item: {fileID: 8937121926740347584, guid: 147a5b81bf2791f4d9f314aec38f75d6, type: 3}
+    chance: 6
+  - item: {fileID: 8937121926740347584, guid: 50b20dd786c66244eab493ef9cd43a65, type: 3}
+    chance: 6
+  - item: {fileID: 8937121926740347584, guid: d00553eaec766074199e070a6f2727ed, type: 3}
+    chance: 6
+  - item: {fileID: 8937121926740347584, guid: 0715ef40235966a40a9a0e49e7783d33, type: 3}
+    chance: 6
