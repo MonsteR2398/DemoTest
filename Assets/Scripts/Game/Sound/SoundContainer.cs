@@ -8,7 +8,6 @@ public class SoundContainer : MonoBehaviour, ITriggerEnterHandler, ITriggerExitH
     [Header("Настройки зоны")]
     public double zoneBpm = 120.0;
     public bool startNewSessionOnEnter = true;
-    public string playerTag = "Player";
 
     [Header("Длина цикла зоны (в битах)")]
     public double cycleLengthBeats = 16.0;
@@ -39,9 +38,10 @@ public class SoundContainer : MonoBehaviour, ITriggerEnterHandler, ITriggerExitH
         if (other.TryGetComponent(out SoundEmitter emitter))
         {
             RegisterDynamicAudio(emitter);
+            Debug.Log(1);
             return;
         }
-        else
+        else if(LayerMask.LayerToName(other.gameObject.layer) == "Player")
         {
             _isActive = true;
             SoundManager.Instance.EnterZone(this, _emitters.ToList(), zoneBpm, startNewSessionOnEnter, cycleLengthBeats);

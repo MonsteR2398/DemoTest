@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4116196769253561925}
   - component: {fileID: -8789633452864302281}
   - component: {fileID: -1579026111104660226}
+  - component: {fileID: 8671238898676707785}
   m_Layer: 8
   m_Name: Brainrot_CappuccinoAssassino
   m_TagString: Untagged
@@ -50,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemName: "\u0413\u0430\u0440\u0430\u043C"
   _price: 250
-  _displayOffset: {x: 0, y: 0, z: 0}
+  _displayOffset: {x: 0, y: 1, z: 0}
   _icon: {fileID: 21300000, guid: 07e412af5db847c46b493c4632c705bf, type: 3}
   NowEnemy: 0
   Data:
@@ -61,10 +62,6 @@ MonoBehaviour:
     Size: 0
     HasSpawned: 0
     Position: {x: 0, y: 0, z: 0}
-  _clip: {fileID: 8300000, guid: b8cd59a0291e3d64991a8df41c63504c, type: 3}
-  _soundRepeatInterval: 35
-  _phaseOffset: 0
-  _soundAfterPhase: 0
   _animator: {fileID: 1119041727029151645}
   materialConfig: {fileID: 11400000, guid: b1dd08a1574269743850dc51b2364ed7, type: 2}
 --- !u!65 &4116196769253561925
@@ -118,6 +115,30 @@ MonoBehaviour:
   _display: {fileID: 7714838624518232342, guid: 7aca265d1938a3d478ca7808587e0123, type: 3}
   _displayOffset: {x: 0, y: 1, z: 0}
   OriginalColors: []
+--- !u!114 &8671238898676707785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2649769015771667880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d491636547d2234f93898729a9ec2d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: b8cd59a0291e3d64991a8df41c63504c, type: 3}
+  isLoop: 0
+  oneShotBeats:
+  - 0.1
+  - 7.3
+  - 14.2
+  - 21
+  - 28
+  - 35
+  useIntervals: 0
+  intervals: []
+  intervalOffsetBeats: 0
 --- !u!1001 &6896124532608799154
 PrefabInstance:
   m_ObjectHideFlags: 0

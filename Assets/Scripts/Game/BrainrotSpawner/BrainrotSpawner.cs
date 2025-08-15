@@ -11,7 +11,7 @@ public class BrainrotSpawner : MonoBehaviour
     [SerializeField] private SpawnerConfig spawnerConfig;
     [SerializeField] private bool _nowEnemy;
     [Range(1, 10)] public float chanceMultiplier = 1f;
-    private static readonly float minSize = 1f;
+    private static readonly float minSize = 2f;
     private static readonly float maxSize = 8f;
 
     [System.Serializable]

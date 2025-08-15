@@ -45,10 +45,11 @@ public class Brainrot : Item, ITriggerEnterHandler, ISpawned
         get => Data.HasSpawned;
         set => Data.HasSpawned = value;
     }
-    
+
     private void Start()
     {
         Initialize();
+        Debug.Log(Data.Size, gameObject);
     }
 
     public void Initialize()
@@ -141,7 +142,6 @@ public class Brainrot : Item, ITriggerEnterHandler, ISpawned
     }
 
     public override Variant GetVariant() => Data.Variant;
-
     public float GetSize() => Data.Size;
     public override int GetPrice()
     {

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1366151737225737920}
   - component: {fileID: 118256223083524872}
   - component: {fileID: -5213627438084370348}
+  - component: {fileID: 6464194472779235055}
   m_Layer: 8
   m_Name: Brainrot_TimCheese
   m_TagString: Untagged
@@ -61,9 +62,6 @@ MonoBehaviour:
     Size: 0
     HasSpawned: 0
     Position: {x: 0, y: 0, z: 0}
-  _clip: {fileID: 8300000, guid: 7cac36f8a4fb5da44aabe7254244be9c, type: 3}
-  _soundRepeatInterval: 0
-  _phaseOffset: 0
   _animator: {fileID: 8754641357420109148}
   materialConfig: {fileID: 11400000, guid: b1dd08a1574269743850dc51b2364ed7, type: 2}
 --- !u!65 &1366151737225737920
@@ -117,6 +115,24 @@ MonoBehaviour:
   _display: {fileID: 7714838624518232342, guid: 7aca265d1938a3d478ca7808587e0123, type: 3}
   _displayOffset: {x: 0, y: 1, z: 0}
   OriginalColors: []
+--- !u!114 &6464194472779235055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2649769015771667880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d491636547d2234f93898729a9ec2d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 0ea4179de0069674fab961d3a74834a0, type: 3}
+  isLoop: 1
+  oneShotBeats: []
+  useIntervals: 0
+  intervals: []
+  intervalOffsetBeats: 0
 --- !u!1001 &8005144720386365535
 PrefabInstance:
   m_ObjectHideFlags: 0

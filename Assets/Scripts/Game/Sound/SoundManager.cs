@@ -57,7 +57,7 @@ public class SoundManager : MonoBehaviour
         if (debugLogs) Debug.Log($"[SM] EnterZone: {zone.name} | emitters={emitters?.Count ?? 0} | startNew={startNewSession} | zoneBpm={zoneBpm} | cycle={_zoneCycle[zone]}");
 
         // если луп в списке и просили начать новую сессию — стартуем с ним
-        var loopEmitter = emitters?.FirstOrDefault(e => e != null && e.isLoop && e.clip != null);
+        var loopEmitter = emitters?.FirstOrDefault(emitter => emitter != null && emitter.isLoop && emitter.clip != null);
 
         if (!_sessionActive)
         {
@@ -86,7 +86,7 @@ public class SoundManager : MonoBehaviour
 
         if (!_zoneEmitters.ContainsKey(zone)) _zoneEmitters[zone] = new List<SoundEmitter>();
         if (!_zoneClipSet.ContainsKey(zone)) _zoneClipSet[zone] = new HashSet<AudioClip>();
-        _zoneCycle[zone] = (cycleLen > 0.001) ? cycleLen : (_zoneCycle.TryGetValue(zone, out var c) ? c : 16.0);
+        _zoneCycle[zone] = (cycleLen > 0.001) ? cycleLen : (_zoneCycle.TryGetValue(zone, out var cycle) ? cycle : 16.0);
 
         // отсекаем дубль по самому AudioClip
         if (_zoneClipSet[zone].Contains(emitter.clip))
@@ -148,10 +148,10 @@ public class SoundManager : MonoBehaviour
 
         if (_zoneEmitters.TryGetValue(zone, out var list))
         {
-            foreach (var e in list)
+            foreach (var emitter in list)
             {
-                _plans.Remove(e);
-                _ownerZone.Remove(e);
+                _plans.Remove(emitter);
+                _ownerZone.Remove(emitter);
             }
         }
 
@@ -166,7 +166,7 @@ public class SoundManager : MonoBehaviour
             _loopOwnerZone = null;
 
             // попробовать найти другой луп
-            var another = _plans.Keys.FirstOrDefault(k => k.isLoop);
+            var another = _plans.Keys.FirstOrDefault(key => key.isLoop);
             if (another != null)
                 StartLoopAlignedToNextWholeBeat(another);
             else if (_plans.Count == 0)
@@ -195,7 +195,7 @@ public class SoundManager : MonoBehaviour
 
         // перестроить все планы относительно начала (beat 0)
         var keys = _plans.Keys.ToArray();
-        foreach (var k in keys) _plans[k] = EmitterPlan.Build(k, 0.0, GetZoneCycleFor(k));
+        foreach (var key in keys) _plans[key] = EmitterPlan.Build(key, 0.0, GetZoneCycleFor(key));
 
         if (debugLogs) Debug.Log($"[SM] StartNewSession: bpm={bpm}, sessionStartDsp={_sessionStartDsp:F4}, loop='{loopEmitter.clip.name}'");
     }
@@ -244,10 +244,10 @@ public class SoundManager : MonoBehaviour
         _newScheduledKeys.Clear();
         int scheduledCount = 0;
 
-        foreach (var kv in _plans)
+        foreach (var planKeyValue in _plans)
         {
-            var emitter = kv.Key;
-            var plan = kv.Value;
+            var emitter = planKeyValue.Key;
+            var plan = planKeyValue.Value;
 
             if (emitter == null || emitter.clip == null) continue;
             if (emitter.isLoop) continue; // луп играет через loopSource
@@ -301,17 +301,17 @@ public class SoundManager : MonoBehaviour
     {
         dspAt = BeatToDsp(beat);
 
-        // дедуп: один и тот же AudioClip на одном и том же бите — один раз
+        // дедупликация: один и тот же AudioClip на одном и том же бите — один раз
         string key = $"{emitter.clip.GetInstanceID()}@{System.Math.Round(beat, 6)}";
         if (_newScheduledKeys.Contains(key)) return false;
         _newScheduledKeys.Add(key);
 
-        var src = gameObject.AddComponent<AudioSource>();
-        src.playOnAwake = false;
-        src.loop = false;
-        src.clip = emitter.clip;
-        src.spatialBlend = 0f;
-        src.PlayScheduled(dspAt);
+        var source = gameObject.AddComponent<AudioSource>();
+        source.playOnAwake = false;
+        source.loop = false;
+        source.clip = emitter.clip;
+        source.spatialBlend = 0f;
+        source.PlayScheduled(dspAt);
 
         var zone = _ownerZone.TryGetValue(emitter, out var z) ? z : null;
         if (zone != null)
@@ -321,10 +321,10 @@ public class SoundManager : MonoBehaviour
                 list = new List<AudioSource>();
                 _scheduledByZone[zone] = list;
             }
-            list.Add(src);
+            list.Add(source);
         }
 
-        Destroy(src, (float)(emitter.clip.length + 3.0));
+        Destroy(source, (float)(emitter.clip.length + 3.0));
 
         if (debugLogs)
             Debug.Log($"[SM] OneShot '{emitter.clip.name}' beat={beat:F3} dspAt={dspAt:F4}");
@@ -398,7 +398,6 @@ public class SoundManager : MonoBehaviour
                 for (int i = 0; i < p.stepBeats.Length; i++)
                 {
                     double step = p.stepBeats[i];
-                    // ближайшее будущее появление этого шага с учётом текущего бита и длины цикла
                     double k = System.Math.Ceiling((currentBeat - step) / p.cycleLen);
                     if (double.IsInfinity(k) || double.IsNaN(k)) k = 0;
                     p.nextStepDue[i] = step + System.Math.Max(0, k) * p.cycleLen;
