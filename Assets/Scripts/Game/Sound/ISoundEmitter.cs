@@ -2,8 +2,7 @@ using UnityEngine;
 
 public interface ISoundEmitter
 {
-    AudioClip Clip { get; }
-    float NextPlayTime { get; set;}
-    float Interval { get; set; }
-    float phaseOffset { get; set; }
+    public AudioClip clip { get; }
+    public double[] beats { get; } // Например {1, 3.5, 5, 10}
+    public bool isLoop { get; } // Основной бит
 }
