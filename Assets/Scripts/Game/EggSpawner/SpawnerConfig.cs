@@ -21,7 +21,7 @@ public class SpawnerConfig : ScriptableObject
         public Rarity Value => rarity;
         public float Chance => chance;
     }
-
+    
     [System.Serializable]
     public class VariantDropChance : IHasChance<Variant>
     {

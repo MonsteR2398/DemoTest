@@ -38,6 +38,7 @@ public class SaveLoadManager : MonoBehaviour
     public void RemoveBrainrotByUniqueId(string uniqueId)
     {
         var brainrot = BrainrotsData.FirstOrDefault(e => e.UniqueId == uniqueId);
+        Debug.Log(brainrot);
         if (brainrot != null)
         {
             BrainrotsData.Remove(brainrot);

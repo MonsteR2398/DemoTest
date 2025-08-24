@@ -6,7 +6,7 @@ public class UIEquipZone : BaseInteractionZone
     private Item _item;
     protected override void Start()
     {
-        _display = ItemCanvasSystem.GetEquipDisplay();
+        _display = ItemCanvasSystem.Instance.GetEquipDisplay();
         _item = this.GetComponent<Item>();
         base.Start();
     }
@@ -25,12 +25,30 @@ public class UIEquipZone : BaseInteractionZone
         }
     }
 
+    // protected override void ActivateZone(Transform playerTransform)
+    // {
+    //     Debug.Log(1);
+    //     base.ActivateZone(playerTransform);
+    //     Debug.Log(2);
+    //     if (_item.NowEnemy)
+    //         _display.SetText("Украсть");
+    //     else
+    //         _display.SetText("Подобрать");
+    // }
+
     protected override void ActivateZone(Transform playerTransform)
     {
         base.ActivateZone(playerTransform);
-        if (_item.NowEnemy)
+
+            _display.SetTarget(gameObject.transform);
+            
+            if (_item.NowEnemy)
             _display.SetText("Украсть");
         else
             _display.SetText("Подобрать");
+        // else
+        // {
+        //     _display.SetActive(false);
+        // }
     }
 }

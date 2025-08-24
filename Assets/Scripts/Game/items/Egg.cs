@@ -114,7 +114,6 @@ public class Egg : Item, IConveyorMovable, ITimer, IBuyable, ISpawned
     {
         if (!string.IsNullOrEmpty(Data.LastSaveTimeString))
         {
-            Debug.Log(Data.LastSaveTimeString);
             DateTime lastSaveTime = DateTime.FromBinary(Convert.ToInt64(Data.LastSaveTimeString));
             TimeSpan offlineTime = DateTime.Now - lastSaveTime;
             Data.SpawnTimer -= (long)offlineTime.TotalSeconds;

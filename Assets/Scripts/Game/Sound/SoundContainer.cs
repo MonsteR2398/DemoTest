@@ -38,7 +38,6 @@ public class SoundContainer : MonoBehaviour, ITriggerEnterHandler, ITriggerExitH
         if (other.TryGetComponent(out SoundEmitter emitter))
         {
             RegisterDynamicAudio(emitter);
-            Debug.Log(1);
             return;
         }
         else if(LayerMask.LayerToName(other.gameObject.layer) == "Player")

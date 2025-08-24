@@ -98,13 +98,18 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IDragHandler, I
             }
             return;
         }
-
         _phantomItem = Instantiate(_item, new Vector3(-0, -0, -0), Quaternion.identity);
         _phantomItem.transform.gameObject.SetActive(true);
-        
+
         //заменить
         if (_phantomItem is Brainrot brainrot)
+        {
             brainrot.SetSize(ItemSize);
+            if (_item is Brainrot brainrot1)
+                brainrot.Data.SetUniqueId(brainrot1.Data.UniqueId);
+
+            Debug.Log(brainrot.Data.UniqueId);
+        }
         if (_phantomItem is Egg egg)
         { 
             if(_item is Egg egg1)
@@ -174,9 +179,11 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IDragHandler, I
             }
             else if (_phantomItem is Brainrot brainrot)
             {
+                Debug.Log(brainrot.Data.UniqueId);
                 LoadInitializer.Instance.SaveLoadManager.RemoveBrainrotByUniqueId(brainrot.Data.UniqueId);
                 _phantomItem.OnSpawnToGround();
                 LoadInitializer.Instance.SaveLoadManager.AddBrainrotData(brainrot.Data);
+                Debug.Log(1);
                 LoadInitializer.Instance.SaveLoadManager.SaveBrainrotsData();
             }
             

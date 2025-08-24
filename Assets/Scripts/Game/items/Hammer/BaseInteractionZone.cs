@@ -56,32 +56,58 @@ public abstract class BaseInteractionZone : MonoBehaviour, ITriggerEnterHandler,
     {
         DeactivateZone();
     }
-    
+
     protected virtual void ActivateZone(Transform playerTransform)
     {
         if (InventorySystem.Instance.itemInHand == null || isActive)
             return;
 
         bool currentZoneValid = currentActiveZone != null && currentActiveZone.gameObject != null;
-        
+
         if (!currentZoneValid || IsCloserToPlayerThan(playerTransform, currentActiveZone))
         {
             if (currentZoneValid && currentActiveZone != this)
                 currentActiveZone.DeactivateZone();
             currentActiveZone = this;
-            _display.SetActive(true);
             SetZoneColor(new Color(1, 0, 0, 0.75f));
+            _display.SetActive(true);
             _display.GetButton.onClick.AddListener(OnActionButtonClick);
             isActive = true;
 
             if (currentHammer != null) return;
             if (InventorySystem.Instance.itemInHand is Hammer hammer)
-            { 
+            {
                 currentHammer = hammer;
                 currentHammer.HammerDeactivate += DeactivateZone;
             }
         }
     }
+
+    // protected virtual void ActivateZone(Transform playerTransform)
+    // {
+    //     if (InventorySystem.Instance.itemInHand == null || isActive)
+    //         return;
+
+    //     bool currentZoneValid = currentActiveZone != null && currentActiveZone.gameObject != null;
+
+    //     if (!currentZoneValid || IsCloserToPlayerThan(playerTransform, currentActiveZone))
+    //     {
+    //         if (currentZoneValid && currentActiveZone != this)
+    //             currentActiveZone.DeactivateZone();
+    //         currentActiveZone = this;
+    //         Debug.Log(currentActiveZone);
+    //         SetZoneColor(new Color(1, 0, 0, 0.75f));
+    //         _display.GetButton.onClick.AddListener(OnActionButtonClick);
+    //         isActive = true;
+
+    //         if (currentHammer != null) return;
+    //         if (InventorySystem.Instance.itemInHand is Hammer hammer)
+    //         {
+    //             currentHammer = hammer;
+    //             currentHammer.HammerDeactivate += DeactivateZone;
+    //         }
+    //     }
+    // }
     
     
     private bool IsCloserToPlayerThan(Transform target, BaseInteractionZone otherZone)

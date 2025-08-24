@@ -7,11 +7,11 @@
         false,
         false
     ],
-    "idSave": 190,
+    "idSave": 39,
     "intData": [
         {
             "key": "Eggs",
-            "value": 18
+            "value": 2
         },
         {
             "key": "Egg_0_Id",
@@ -19,67 +19,27 @@
         },
         {
             "key": "Egg_0_Rarity",
-            "value": 0
+            "value": 1
         },
         {
             "key": "Egg_0_Variant",
-            "value": 0
+            "value": 2
         },
         {
             "key": "Egg_0_HasSpawned",
-            "value": 0
+            "value": 1
         },
         {
             "key": "Egg_0_HasActiveTimer",
             "value": 0
         },
         {
-            "key": "Egg_1_Id",
-            "value": 2
-        },
-        {
-            "key": "Egg_1_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Egg_1_Variant",
-            "value": 2
-        },
-        {
-            "key": "Egg_1_HasSpawned",
-            "value": 0
-        },
-        {
-            "key": "Egg_1_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_2_Id",
-            "value": 1
-        },
-        {
-            "key": "Egg_2_Rarity",
-            "value": 1
-        },
-        {
-            "key": "Egg_2_Variant",
-            "value": 0
-        },
-        {
-            "key": "Egg_2_HasSpawned",
-            "value": 0
-        },
-        {
-            "key": "Egg_2_HasActiveTimer",
-            "value": 0
-        },
-        {
             "key": "Brainrots",
-            "value": 32
+            "value": 13
         },
         {
             "key": "Brainrot_0_Id",
-            "value": 6
+            "value": 3
         },
         {
             "key": "Brainrot_0_Rarity",
@@ -87,27 +47,27 @@
         },
         {
             "key": "Brainrot_0_Variant",
-            "value": 1
+            "value": 0
         },
         {
             "key": "Brainrot_0_Income",
-            "value": 30
+            "value": 10
         },
         {
             "key": "Brainrot_0_HasSpawned",
-            "value": 1
+            "value": 0
         },
         {
             "key": "Brainrot_1_Id",
-            "value": 13
+            "value": 3
         },
         {
             "key": "Brainrot_1_Rarity",
-            "value": 2
+            "value": 0
         },
         {
             "key": "Brainrot_1_Variant",
-            "value": 1
+            "value": 0
         },
         {
             "key": "Brainrot_1_Income",
@@ -115,23 +75,23 @@
         },
         {
             "key": "Brainrot_1_HasSpawned",
-            "value": 1
+            "value": 0
         },
         {
             "key": "Brainrot_2_Id",
-            "value": 13
+            "value": 3
         },
         {
             "key": "Brainrot_2_Rarity",
-            "value": 2
+            "value": 0
         },
         {
             "key": "Brainrot_2_Variant",
-            "value": 2
+            "value": 0
         },
         {
             "key": "Brainrot_2_Income",
-            "value": 250
+            "value": 10
         },
         {
             "key": "Brainrot_2_HasSpawned",
@@ -139,23 +99,23 @@
         },
         {
             "key": "Brainrot_3_Id",
-            "value": 13
+            "value": 3
         },
         {
             "key": "Brainrot_3_Rarity",
-            "value": 2
+            "value": 0
         },
         {
             "key": "Brainrot_3_Variant",
-            "value": 2
+            "value": 0
         },
         {
             "key": "Brainrot_3_Income",
-            "value": 1250
+            "value": 10
         },
         {
             "key": "Brainrot_3_HasSpawned",
-            "value": 1
+            "value": 0
         },
         {
             "key": "Brainrot_4_Id",
@@ -163,11 +123,11 @@
         },
         {
             "key": "Brainrot_4_Rarity",
-            "value": 1
+            "value": 0
         },
         {
             "key": "Brainrot_4_Variant",
-            "value": 2
+            "value": 0
         },
         {
             "key": "Brainrot_4_Income",
@@ -179,19 +139,19 @@
         },
         {
             "key": "Brainrot_5_Id",
-            "value": 13
+            "value": 3
         },
         {
             "key": "Brainrot_5_Rarity",
-            "value": 2
+            "value": 0
         },
         {
             "key": "Brainrot_5_Variant",
-            "value": 2
+            "value": 0
         },
         {
             "key": "Brainrot_5_Income",
-            "value": 1250
+            "value": 10
         },
         {
             "key": "Brainrot_5_HasSpawned",
@@ -199,19 +159,19 @@
         },
         {
             "key": "Brainrot_6_Id",
-            "value": 13
+            "value": 3
         },
         {
             "key": "Brainrot_6_Rarity",
-            "value": 2
+            "value": 0
         },
         {
             "key": "Brainrot_6_Variant",
-            "value": 2
+            "value": 0
         },
         {
             "key": "Brainrot_6_Income",
-            "value": 1250
+            "value": 10
         },
         {
             "key": "Brainrot_6_HasSpawned",
@@ -219,287 +179,27 @@
         },
         {
             "key": "Brainrot_7_Id",
-            "value": 13
+            "value": 3
         },
         {
             "key": "Brainrot_7_Rarity",
-            "value": 2
+            "value": 0
         },
         {
             "key": "Brainrot_7_Variant",
-            "value": 2
+            "value": 0
         },
         {
             "key": "Brainrot_7_Income",
-            "value": 1250
+            "value": 10
         },
         {
             "key": "Brainrot_7_HasSpawned",
             "value": 1
         },
         {
-            "key": "Egg_3_Id",
-            "value": 2
-        },
-        {
-            "key": "Egg_3_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Egg_3_Variant",
-            "value": 0
-        },
-        {
-            "key": "Egg_3_HasSpawned",
-            "value": 0
-        },
-        {
-            "key": "Egg_3_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_4_Id",
-            "value": 1
-        },
-        {
-            "key": "Egg_4_Rarity",
-            "value": 1
-        },
-        {
-            "key": "Egg_4_Variant",
-            "value": 0
-        },
-        {
-            "key": "Egg_4_HasSpawned",
-            "value": 0
-        },
-        {
-            "key": "Egg_4_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_5_Id",
-            "value": 1
-        },
-        {
-            "key": "Egg_5_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Egg_5_Variant",
-            "value": 0
-        },
-        {
-            "key": "Egg_5_HasSpawned",
-            "value": 0
-        },
-        {
-            "key": "Egg_5_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_6_Id",
-            "value": 1
-        },
-        {
-            "key": "Egg_6_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Egg_6_Variant",
-            "value": 0
-        },
-        {
-            "key": "Egg_6_HasSpawned",
-            "value": 0
-        },
-        {
-            "key": "Egg_6_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_7_Id",
-            "value": 2
-        },
-        {
-            "key": "Egg_7_Rarity",
-            "value": 1
-        },
-        {
-            "key": "Egg_7_Variant",
-            "value": 0
-        },
-        {
-            "key": "Egg_7_HasSpawned",
-            "value": 0
-        },
-        {
-            "key": "Egg_7_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_8_Id",
-            "value": 1
-        },
-        {
-            "key": "Egg_8_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Egg_8_Variant",
-            "value": 0
-        },
-        {
-            "key": "Egg_8_HasSpawned",
-            "value": 0
-        },
-        {
-            "key": "Egg_8_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_9_Id",
-            "value": 1
-        },
-        {
-            "key": "Egg_9_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Egg_9_Variant",
-            "value": 0
-        },
-        {
-            "key": "Egg_9_HasSpawned",
-            "value": 0
-        },
-        {
-            "key": "Egg_9_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_10_Id",
-            "value": 2
-        },
-        {
-            "key": "Egg_10_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Egg_10_Variant",
-            "value": 0
-        },
-        {
-            "key": "Egg_10_HasSpawned",
-            "value": 0
-        },
-        {
-            "key": "Egg_10_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_11_Id",
-            "value": 1
-        },
-        {
-            "key": "Egg_11_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Egg_11_Variant",
-            "value": 0
-        },
-        {
-            "key": "Egg_11_HasSpawned",
-            "value": 0
-        },
-        {
-            "key": "Egg_11_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_12_Id",
-            "value": 1
-        },
-        {
-            "key": "Egg_12_Rarity",
-            "value": 1
-        },
-        {
-            "key": "Egg_12_Variant",
-            "value": 0
-        },
-        {
-            "key": "Egg_12_HasSpawned",
-            "value": 0
-        },
-        {
-            "key": "Egg_12_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_13_Id",
-            "value": 1
-        },
-        {
-            "key": "Egg_13_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Egg_13_Variant",
-            "value": 0
-        },
-        {
-            "key": "Egg_13_HasSpawned",
-            "value": 0
-        },
-        {
-            "key": "Egg_13_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_14_Id",
-            "value": 2
-        },
-        {
-            "key": "Egg_14_Rarity",
-            "value": 1
-        },
-        {
-            "key": "Egg_14_Variant",
-            "value": 0
-        },
-        {
-            "key": "Egg_14_HasSpawned",
-            "value": 0
-        },
-        {
-            "key": "Egg_14_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_15_Id",
-            "value": 2
-        },
-        {
-            "key": "Egg_15_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Egg_15_Variant",
-            "value": 0
-        },
-        {
-            "key": "Egg_15_HasSpawned",
-            "value": 0
-        },
-        {
-            "key": "Egg_15_HasActiveTimer",
-            "value": 0
-        },
-        {
             "key": "Brainrot_8_Id",
-            "value": 13
+            "value": 3
         },
         {
             "key": "Brainrot_8_Rarity",
@@ -507,11 +207,11 @@
         },
         {
             "key": "Brainrot_8_Variant",
-            "value": 1
+            "value": 0
         },
         {
             "key": "Brainrot_8_Income",
-            "value": 32
+            "value": 10
         },
         {
             "key": "Brainrot_8_HasSpawned",
@@ -519,27 +219,27 @@
         },
         {
             "key": "Brainrot_9_Id",
-            "value": 7
+            "value": 4
         },
         {
             "key": "Brainrot_9_Rarity",
-            "value": 0
+            "value": 2
         },
         {
             "key": "Brainrot_9_Variant",
-            "value": 1
+            "value": 0
         },
         {
             "key": "Brainrot_9_Income",
-            "value": 30
+            "value": 10
         },
         {
             "key": "Brainrot_9_HasSpawned",
-            "value": 1
+            "value": 0
         },
         {
             "key": "Brainrot_10_Id",
-            "value": 8
+            "value": 3
         },
         {
             "key": "Brainrot_10_Rarity",
@@ -555,11 +255,11 @@
         },
         {
             "key": "Brainrot_10_HasSpawned",
-            "value": 1
+            "value": 0
         },
         {
             "key": "Brainrot_11_Id",
-            "value": 1
+            "value": 3
         },
         {
             "key": "Brainrot_11_Rarity",
@@ -567,695 +267,55 @@
         },
         {
             "key": "Brainrot_11_Variant",
-            "value": 2
+            "value": 0
         },
         {
             "key": "Brainrot_11_Income",
-            "value": 50
+            "value": 10
         },
         {
             "key": "Brainrot_11_HasSpawned",
-            "value": 1
+            "value": 0
         },
         {
             "key": "Brainrot_12_Id",
-            "value": 8
+            "value": 3
         },
         {
             "key": "Brainrot_12_Rarity",
-            "value": 1
+            "value": 0
         },
         {
             "key": "Brainrot_12_Variant",
-            "value": 2
+            "value": 0
         },
         {
             "key": "Brainrot_12_Income",
-            "value": 50
+            "value": 10
         },
         {
             "key": "Brainrot_12_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_13_Id",
-            "value": 8
-        },
-        {
-            "key": "Brainrot_13_Rarity",
             "value": 0
         },
         {
-            "key": "Brainrot_13_Variant",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_13_Income",
-            "value": 30
-        },
-        {
-            "key": "Brainrot_13_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_14_Id",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_14_Rarity",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_14_Variant",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_14_Income",
-            "value": 35
-        },
-        {
-            "key": "Brainrot_14_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_15_Id",
-            "value": 10
-        },
-        {
-            "key": "Brainrot_15_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_15_Variant",
+            "key": "Egg_1_Id",
             "value": 2
         },
         {
-            "key": "Brainrot_15_Income",
-            "value": 50
-        },
-        {
-            "key": "Brainrot_15_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_16_Id",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_16_Rarity",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_16_Variant",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_16_Income",
-            "value": 10
-        },
-        {
-            "key": "Brainrot_16_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Egg_16_Id",
-            "value": 1
-        },
-        {
-            "key": "Egg_16_Rarity",
+            "key": "Egg_1_Rarity",
             "value": 0
         },
         {
-            "key": "Egg_16_Variant",
-            "value": 1
-        },
-        {
-            "key": "Egg_16_HasSpawned",
+            "key": "Egg_1_Variant",
             "value": 0
         },
         {
-            "key": "Egg_16_HasActiveTimer",
+            "key": "Egg_1_HasSpawned",
             "value": 0
         },
         {
-            "key": "Egg_17_Id",
-            "value": 1
-        },
-        {
-            "key": "Egg_17_Rarity",
+            "key": "Egg_1_HasActiveTimer",
             "value": 0
-        },
-        {
-            "key": "Egg_17_Variant",
-            "value": 1
-        },
-        {
-            "key": "Egg_17_HasSpawned",
-            "value": 0
-        },
-        {
-            "key": "Egg_17_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_18_Id",
-            "value": 2
-        },
-        {
-            "key": "Egg_18_Rarity",
-            "value": 1
-        },
-        {
-            "key": "Egg_18_Variant",
-            "value": 1
-        },
-        {
-            "key": "Egg_18_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Egg_18_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_19_Id",
-            "value": 2
-        },
-        {
-            "key": "Egg_19_Rarity",
-            "value": 1
-        },
-        {
-            "key": "Egg_19_Variant",
-            "value": 1
-        },
-        {
-            "key": "Egg_19_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Egg_19_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_20_Id",
-            "value": 2
-        },
-        {
-            "key": "Egg_20_Rarity",
-            "value": 1
-        },
-        {
-            "key": "Egg_20_Variant",
-            "value": 1
-        },
-        {
-            "key": "Egg_20_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Egg_20_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_21_Id",
-            "value": 2
-        },
-        {
-            "key": "Egg_21_Rarity",
-            "value": 1
-        },
-        {
-            "key": "Egg_21_Variant",
-            "value": 1
-        },
-        {
-            "key": "Egg_21_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Egg_21_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_22_Id",
-            "value": 2
-        },
-        {
-            "key": "Egg_22_Rarity",
-            "value": 1
-        },
-        {
-            "key": "Egg_22_Variant",
-            "value": 1
-        },
-        {
-            "key": "Egg_22_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Egg_22_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_23_Id",
-            "value": 2
-        },
-        {
-            "key": "Egg_23_Rarity",
-            "value": 1
-        },
-        {
-            "key": "Egg_23_Variant",
-            "value": 1
-        },
-        {
-            "key": "Egg_23_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Egg_23_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_24_Id",
-            "value": 2
-        },
-        {
-            "key": "Egg_24_Rarity",
-            "value": 1
-        },
-        {
-            "key": "Egg_24_Variant",
-            "value": 1
-        },
-        {
-            "key": "Egg_24_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Egg_24_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_25_Id",
-            "value": 4
-        },
-        {
-            "key": "Egg_25_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Egg_25_Variant",
-            "value": 0
-        },
-        {
-            "key": "Egg_25_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Egg_25_HasActiveTimer",
-            "value": 1
-        },
-        {
-            "key": "Egg_26_Id",
-            "value": 4
-        },
-        {
-            "key": "Egg_26_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Egg_26_Variant",
-            "value": 0
-        },
-        {
-            "key": "Egg_26_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Egg_26_HasActiveTimer",
-            "value": 1
-        },
-        {
-            "key": "Egg_27_Id",
-            "value": 2
-        },
-        {
-            "key": "Egg_27_Rarity",
-            "value": 2
-        },
-        {
-            "key": "Egg_27_Variant",
-            "value": 0
-        },
-        {
-            "key": "Egg_27_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Egg_27_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_28_Id",
-            "value": 3
-        },
-        {
-            "key": "Egg_28_Rarity",
-            "value": 2
-        },
-        {
-            "key": "Egg_28_Variant",
-            "value": 0
-        },
-        {
-            "key": "Egg_28_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Egg_28_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Egg_29_Id",
-            "value": 2
-        },
-        {
-            "key": "Egg_29_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Egg_29_Variant",
-            "value": 0
-        },
-        {
-            "key": "Egg_29_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Egg_29_HasActiveTimer",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_17_Id",
-            "value": 13
-        },
-        {
-            "key": "Brainrot_17_Rarity",
-            "value": 2
-        },
-        {
-            "key": "Brainrot_17_Variant",
-            "value": 2
-        },
-        {
-            "key": "Brainrot_17_Income",
-            "value": 1250
-        },
-        {
-            "key": "Brainrot_17_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_18_Id",
-            "value": 13
-        },
-        {
-            "key": "Brainrot_18_Rarity",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_18_Variant",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_18_Income",
-            "value": 10
-        },
-        {
-            "key": "Brainrot_18_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_19_Id",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_19_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_19_Variant",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_19_Income",
-            "value": 10
-        },
-        {
-            "key": "Brainrot_19_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_20_Id",
-            "value": 3
-        },
-        {
-            "key": "Brainrot_20_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_20_Variant",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_20_Income",
-            "value": 10
-        },
-        {
-            "key": "Brainrot_20_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_21_Id",
-            "value": 13
-        },
-        {
-            "key": "Brainrot_21_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_21_Variant",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_21_Income",
-            "value": 10
-        },
-        {
-            "key": "Brainrot_21_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_22_Id",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_22_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_22_Variant",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_22_Income",
-            "value": 10
-        },
-        {
-            "key": "Brainrot_22_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_23_Id",
-            "value": 6
-        },
-        {
-            "key": "Brainrot_23_Rarity",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_23_Variant",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_23_Income",
-            "value": 10
-        },
-        {
-            "key": "Brainrot_23_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_24_Id",
-            "value": 13
-        },
-        {
-            "key": "Brainrot_24_Rarity",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_24_Variant",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_24_Income",
-            "value": 10
-        },
-        {
-            "key": "Brainrot_24_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_25_Id",
-            "value": 7
-        },
-        {
-            "key": "Brainrot_25_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_25_Variant",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_25_Income",
-            "value": 32
-        },
-        {
-            "key": "Brainrot_25_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_26_Id",
-            "value": 3
-        },
-        {
-            "key": "Brainrot_26_Rarity",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_26_Variant",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_26_Income",
-            "value": 36
-        },
-        {
-            "key": "Brainrot_26_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_27_Id",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_27_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_27_Variant",
-            "value": 2
-        },
-        {
-            "key": "Brainrot_27_Income",
-            "value": 50
-        },
-        {
-            "key": "Brainrot_27_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_28_Id",
-            "value": 8
-        },
-        {
-            "key": "Brainrot_28_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_28_Variant",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_28_Income",
-            "value": 10
-        },
-        {
-            "key": "Brainrot_28_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_29_Id",
-            "value": 3
-        },
-        {
-            "key": "Brainrot_29_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_29_Variant",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_29_Income",
-            "value": 10
-        },
-        {
-            "key": "Brainrot_29_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_30_Id",
-            "value": 3
-        },
-        {
-            "key": "Brainrot_30_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_30_Variant",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_30_Income",
-            "value": 10
-        },
-        {
-            "key": "Brainrot_30_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_31_Id",
-            "value": 13
-        },
-        {
-            "key": "Brainrot_31_Rarity",
-            "value": 2
-        },
-        {
-            "key": "Brainrot_31_Variant",
-            "value": 2
-        },
-        {
-            "key": "Brainrot_31_Income",
-            "value": 1250
-        },
-        {
-            "key": "Brainrot_31_HasSpawned",
-            "value": 1
         }
     ],
     "longData": [],
@@ -1266,15 +326,223 @@
         },
         {
             "key": "Egg_0_PositionX",
-            "value": 0.0
+            "value": -30.18035316467285
         },
         {
             "key": "Egg_0_PositionY",
-            "value": 0.0
+            "value": 0.15841500461101533
         },
         {
             "key": "Egg_0_PositionZ",
-            "value": 0.0
+            "value": 0.7522092461585999
+        },
+        {
+            "key": "Brainrot_0_Size",
+            "value": 2.4700000286102297
+        },
+        {
+            "key": "Brainrot_0_PositionX",
+            "value": -27.776491165161134
+        },
+        {
+            "key": "Brainrot_0_PositionY",
+            "value": 0.15841500461101533
+        },
+        {
+            "key": "Brainrot_0_PositionZ",
+            "value": -1.2692067623138428
+        },
+        {
+            "key": "Brainrot_1_Size",
+            "value": 2.4700000286102297
+        },
+        {
+            "key": "Brainrot_1_PositionX",
+            "value": -29.096702575683595
+        },
+        {
+            "key": "Brainrot_1_PositionY",
+            "value": 0.15841500461101533
+        },
+        {
+            "key": "Brainrot_1_PositionZ",
+            "value": -0.23702049255371095
+        },
+        {
+            "key": "Brainrot_2_Size",
+            "value": 2.4700000286102297
+        },
+        {
+            "key": "Brainrot_2_PositionX",
+            "value": -27.739450454711915
+        },
+        {
+            "key": "Brainrot_2_PositionY",
+            "value": 0.15841500461101533
+        },
+        {
+            "key": "Brainrot_2_PositionZ",
+            "value": -0.7881709337234497
+        },
+        {
+            "key": "Brainrot_3_Size",
+            "value": 2.4700000286102297
+        },
+        {
+            "key": "Brainrot_3_PositionX",
+            "value": -27.727569580078126
+        },
+        {
+            "key": "Brainrot_3_PositionY",
+            "value": 0.15841500461101533
+        },
+        {
+            "key": "Brainrot_3_PositionZ",
+            "value": -0.7982214689254761
+        },
+        {
+            "key": "Brainrot_4_Size",
+            "value": 2.4700000286102297
+        },
+        {
+            "key": "Brainrot_4_PositionX",
+            "value": -27.359302520751954
+        },
+        {
+            "key": "Brainrot_4_PositionY",
+            "value": 0.15841500461101533
+        },
+        {
+            "key": "Brainrot_4_PositionZ",
+            "value": -2.2299373149871828
+        },
+        {
+            "key": "Brainrot_5_Size",
+            "value": 2.4700000286102297
+        },
+        {
+            "key": "Brainrot_5_PositionX",
+            "value": -27.35663414001465
+        },
+        {
+            "key": "Brainrot_5_PositionY",
+            "value": 0.15841500461101533
+        },
+        {
+            "key": "Brainrot_5_PositionZ",
+            "value": 3.069267988204956
+        },
+        {
+            "key": "Brainrot_6_Size",
+            "value": 2.4700000286102297
+        },
+        {
+            "key": "Brainrot_6_PositionX",
+            "value": -26.39826774597168
+        },
+        {
+            "key": "Brainrot_6_PositionY",
+            "value": 0.15841500461101533
+        },
+        {
+            "key": "Brainrot_6_PositionZ",
+            "value": -6.018551826477051
+        },
+        {
+            "key": "Brainrot_7_Size",
+            "value": 2.4700000286102297
+        },
+        {
+            "key": "Brainrot_7_PositionX",
+            "value": -26.33163833618164
+        },
+        {
+            "key": "Brainrot_7_PositionY",
+            "value": 0.15841500461101533
+        },
+        {
+            "key": "Brainrot_7_PositionZ",
+            "value": 5.467950820922852
+        },
+        {
+            "key": "Brainrot_8_Size",
+            "value": 2.4700000286102297
+        },
+        {
+            "key": "Brainrot_8_PositionX",
+            "value": -25.805789947509767
+        },
+        {
+            "key": "Brainrot_8_PositionY",
+            "value": 0.15841500461101533
+        },
+        {
+            "key": "Brainrot_8_PositionZ",
+            "value": 3.0247104167938234
+        },
+        {
+            "key": "Brainrot_9_Size",
+            "value": 2.0
+        },
+        {
+            "key": "Brainrot_9_PositionX",
+            "value": 30.360305786132814
+        },
+        {
+            "key": "Brainrot_9_PositionY",
+            "value": 0.22499999403953553
+        },
+        {
+            "key": "Brainrot_9_PositionZ",
+            "value": 3.454927921295166
+        },
+        {
+            "key": "Brainrot_10_Size",
+            "value": 2.4700000286102297
+        },
+        {
+            "key": "Brainrot_10_PositionX",
+            "value": -26.000593185424806
+        },
+        {
+            "key": "Brainrot_10_PositionY",
+            "value": 0.15841500461101533
+        },
+        {
+            "key": "Brainrot_10_PositionZ",
+            "value": -1.4916582107543946
+        },
+        {
+            "key": "Brainrot_11_Size",
+            "value": 2.4700000286102297
+        },
+        {
+            "key": "Brainrot_11_PositionX",
+            "value": -27.213457107543947
+        },
+        {
+            "key": "Brainrot_11_PositionY",
+            "value": 0.15841500461101533
+        },
+        {
+            "key": "Brainrot_11_PositionZ",
+            "value": -0.14464899897575379
+        },
+        {
+            "key": "Brainrot_12_Size",
+            "value": 2.4700000286102297
+        },
+        {
+            "key": "Brainrot_12_PositionX",
+            "value": -26.168004989624025
+        },
+        {
+            "key": "Brainrot_12_PositionY",
+            "value": 0.15841500461101533
+        },
+        {
+            "key": "Brainrot_12_PositionZ",
+            "value": -3.8442091941833498
         },
         {
             "key": "Egg_1_SpawnTimer",
@@ -1291,1336 +559,76 @@
         {
             "key": "Egg_1_PositionZ",
             "value": 0.0
-        },
-        {
-            "key": "Egg_2_SpawnTimer",
-            "value": 1000.0
-        },
-        {
-            "key": "Egg_2_PositionX",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_2_PositionY",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_2_PositionZ",
-            "value": 0.0
-        },
-        {
-            "key": "Brainrot_0_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_0_PositionX",
-            "value": -30.137256622314454
-        },
-        {
-            "key": "Brainrot_0_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_0_PositionZ",
-            "value": 3.197575092315674
-        },
-        {
-            "key": "Brainrot_1_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_1_PositionX",
-            "value": -27.595741271972658
-        },
-        {
-            "key": "Brainrot_1_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_1_PositionZ",
-            "value": 0.28987932205200198
-        },
-        {
-            "key": "Brainrot_2_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_2_PositionX",
-            "value": -29.990665435791017
-        },
-        {
-            "key": "Brainrot_2_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_2_PositionZ",
-            "value": -0.7547543048858643
-        },
-        {
-            "key": "Brainrot_3_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_3_PositionX",
-            "value": -26.6044864654541
-        },
-        {
-            "key": "Brainrot_3_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_3_PositionZ",
-            "value": 4.46300745010376
-        },
-        {
-            "key": "Brainrot_4_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_4_PositionX",
-            "value": -27.251239776611329
-        },
-        {
-            "key": "Brainrot_4_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_4_PositionZ",
-            "value": -2.363945484161377
-        },
-        {
-            "key": "Brainrot_5_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_5_PositionX",
-            "value": -29.662954330444337
-        },
-        {
-            "key": "Brainrot_5_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_5_PositionZ",
-            "value": -7.092487335205078
-        },
-        {
-            "key": "Brainrot_6_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_6_PositionX",
-            "value": -30.878684997558595
-        },
-        {
-            "key": "Brainrot_6_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_6_PositionZ",
-            "value": -5.846378803253174
-        },
-        {
-            "key": "Brainrot_7_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_7_PositionX",
-            "value": -25.838451385498048
-        },
-        {
-            "key": "Brainrot_7_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_7_PositionZ",
-            "value": 0.23018178343772889
-        },
-        {
-            "key": "Egg_3_SpawnTimer",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_3_PositionX",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_3_PositionY",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_3_PositionZ",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_4_SpawnTimer",
-            "value": 1000.0
-        },
-        {
-            "key": "Egg_4_PositionX",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_4_PositionY",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_4_PositionZ",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_5_SpawnTimer",
-            "value": 1000.0
-        },
-        {
-            "key": "Egg_5_PositionX",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_5_PositionY",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_5_PositionZ",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_6_SpawnTimer",
-            "value": 1000.0
-        },
-        {
-            "key": "Egg_6_PositionX",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_6_PositionY",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_6_PositionZ",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_7_SpawnTimer",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_7_PositionX",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_7_PositionY",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_7_PositionZ",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_8_SpawnTimer",
-            "value": 1000.0
-        },
-        {
-            "key": "Egg_8_PositionX",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_8_PositionY",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_8_PositionZ",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_9_SpawnTimer",
-            "value": 1000.0
-        },
-        {
-            "key": "Egg_9_PositionX",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_9_PositionY",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_9_PositionZ",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_10_SpawnTimer",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_10_PositionX",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_10_PositionY",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_10_PositionZ",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_11_SpawnTimer",
-            "value": 1000.0
-        },
-        {
-            "key": "Egg_11_PositionX",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_11_PositionY",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_11_PositionZ",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_12_SpawnTimer",
-            "value": 1000.0
-        },
-        {
-            "key": "Egg_12_PositionX",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_12_PositionY",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_12_PositionZ",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_13_SpawnTimer",
-            "value": 1000.0
-        },
-        {
-            "key": "Egg_13_PositionX",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_13_PositionY",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_13_PositionZ",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_14_SpawnTimer",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_14_PositionX",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_14_PositionY",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_14_PositionZ",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_15_SpawnTimer",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_15_PositionX",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_15_PositionY",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_15_PositionZ",
-            "value": 0.0
-        },
-        {
-            "key": "Brainrot_8_Size",
-            "value": 2.259999990463257
-        },
-        {
-            "key": "Brainrot_8_PositionX",
-            "value": -27.678367614746095
-        },
-        {
-            "key": "Brainrot_8_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_8_PositionZ",
-            "value": -2.8152551651000978
-        },
-        {
-            "key": "Brainrot_9_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_9_PositionX",
-            "value": -29.057344436645509
-        },
-        {
-            "key": "Brainrot_9_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_9_PositionZ",
-            "value": -1.6138851642608643
-        },
-        {
-            "key": "Brainrot_10_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_10_PositionX",
-            "value": -30.436500549316408
-        },
-        {
-            "key": "Brainrot_10_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_10_PositionZ",
-            "value": -0.9980759620666504
-        },
-        {
-            "key": "Brainrot_11_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_11_PositionX",
-            "value": -28.941707611083986
-        },
-        {
-            "key": "Brainrot_11_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_11_PositionZ",
-            "value": 1.494959831237793
-        },
-        {
-            "key": "Brainrot_12_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_12_PositionX",
-            "value": -30.245342254638673
-        },
-        {
-            "key": "Brainrot_12_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_12_PositionZ",
-            "value": 1.0606803894042969
-        },
-        {
-            "key": "Brainrot_13_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_13_PositionX",
-            "value": -27.513395309448243
-        },
-        {
-            "key": "Brainrot_13_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_13_PositionZ",
-            "value": 7.378897666931152
-        },
-        {
-            "key": "Brainrot_14_Size",
-            "value": 2.549999952316284
-        },
-        {
-            "key": "Brainrot_14_PositionX",
-            "value": -26.788822174072267
-        },
-        {
-            "key": "Brainrot_14_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_14_PositionZ",
-            "value": 6.017322540283203
-        },
-        {
-            "key": "Brainrot_15_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_15_PositionX",
-            "value": -25.75924301147461
-        },
-        {
-            "key": "Brainrot_15_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_15_PositionZ",
-            "value": 2.975243091583252
-        },
-        {
-            "key": "Brainrot_16_Size",
-            "value": 2.890000104904175
-        },
-        {
-            "key": "Brainrot_16_PositionX",
-            "value": -26.758880615234376
-        },
-        {
-            "key": "Brainrot_16_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_16_PositionZ",
-            "value": -4.701010704040527
-        },
-        {
-            "key": "Egg_16_SpawnTimer",
-            "value": 1000.0
-        },
-        {
-            "key": "Egg_16_PositionX",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_16_PositionY",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_16_PositionZ",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_17_SpawnTimer",
-            "value": 1000.0
-        },
-        {
-            "key": "Egg_17_PositionX",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_17_PositionY",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_17_PositionZ",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_18_SpawnTimer",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_18_PositionX",
-            "value": -26.682214736938478
-        },
-        {
-            "key": "Egg_18_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Egg_18_PositionZ",
-            "value": 2.4697556495666506
-        },
-        {
-            "key": "Egg_19_SpawnTimer",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_19_PositionX",
-            "value": -26.682214736938478
-        },
-        {
-            "key": "Egg_19_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Egg_19_PositionZ",
-            "value": 2.4697556495666506
-        },
-        {
-            "key": "Egg_20_SpawnTimer",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_20_PositionX",
-            "value": -26.682214736938478
-        },
-        {
-            "key": "Egg_20_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Egg_20_PositionZ",
-            "value": 2.4697556495666506
-        },
-        {
-            "key": "Egg_21_SpawnTimer",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_21_PositionX",
-            "value": -26.682214736938478
-        },
-        {
-            "key": "Egg_21_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Egg_21_PositionZ",
-            "value": 2.4697556495666506
-        },
-        {
-            "key": "Egg_22_SpawnTimer",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_22_PositionX",
-            "value": -26.682214736938478
-        },
-        {
-            "key": "Egg_22_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Egg_22_PositionZ",
-            "value": 2.4697556495666506
-        },
-        {
-            "key": "Egg_23_SpawnTimer",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_23_PositionX",
-            "value": -26.682214736938478
-        },
-        {
-            "key": "Egg_23_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Egg_23_PositionZ",
-            "value": 2.4697556495666506
-        },
-        {
-            "key": "Egg_24_SpawnTimer",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_24_PositionX",
-            "value": -26.682214736938478
-        },
-        {
-            "key": "Egg_24_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Egg_24_PositionZ",
-            "value": 2.4697556495666506
-        },
-        {
-            "key": "Egg_25_SpawnTimer",
-            "value": 999.0
-        },
-        {
-            "key": "Egg_25_PositionX",
-            "value": -26.166290283203126
-        },
-        {
-            "key": "Egg_25_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Egg_25_PositionZ",
-            "value": 1.5435900688171387
-        },
-        {
-            "key": "Egg_26_SpawnTimer",
-            "value": 999.0
-        },
-        {
-            "key": "Egg_26_PositionX",
-            "value": -26.166290283203126
-        },
-        {
-            "key": "Egg_26_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Egg_26_PositionZ",
-            "value": 1.5435900688171387
-        },
-        {
-            "key": "Egg_27_SpawnTimer",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_27_PositionX",
-            "value": -25.988752365112306
-        },
-        {
-            "key": "Egg_27_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Egg_27_PositionZ",
-            "value": 0.9524712562561035
-        },
-        {
-            "key": "Egg_28_SpawnTimer",
-            "value": 1000.0
-        },
-        {
-            "key": "Egg_28_PositionX",
-            "value": -25.130342483520509
-        },
-        {
-            "key": "Egg_28_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Egg_28_PositionZ",
-            "value": -0.0789794921875
-        },
-        {
-            "key": "Egg_29_SpawnTimer",
-            "value": 0.0
-        },
-        {
-            "key": "Egg_29_PositionX",
-            "value": -25.836246490478517
-        },
-        {
-            "key": "Egg_29_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Egg_29_PositionZ",
-            "value": -5.283539772033691
-        },
-        {
-            "key": "Brainrot_17_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_17_PositionX",
-            "value": -25.32206916809082
-        },
-        {
-            "key": "Brainrot_17_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_17_PositionZ",
-            "value": 0.7688000202178955
-        },
-        {
-            "key": "Brainrot_18_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_18_PositionX",
-            "value": -25.836246490478517
-        },
-        {
-            "key": "Brainrot_18_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_18_PositionZ",
-            "value": -5.283539772033691
-        },
-        {
-            "key": "Brainrot_19_Size",
-            "value": 2.049999952316284
-        },
-        {
-            "key": "Brainrot_19_PositionX",
-            "value": -26.20184326171875
-        },
-        {
-            "key": "Brainrot_19_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_19_PositionZ",
-            "value": -6.155452728271484
-        },
-        {
-            "key": "Brainrot_20_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_20_PositionX",
-            "value": -25.130342483520509
-        },
-        {
-            "key": "Brainrot_20_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_20_PositionZ",
-            "value": -0.0789794921875
-        },
-        {
-            "key": "Brainrot_21_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_21_PositionX",
-            "value": -25.988752365112306
-        },
-        {
-            "key": "Brainrot_21_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_21_PositionZ",
-            "value": 0.9524712562561035
-        },
-        {
-            "key": "Brainrot_22_Size",
-            "value": 2.1600000858306886
-        },
-        {
-            "key": "Brainrot_22_PositionX",
-            "value": -26.32208251953125
-        },
-        {
-            "key": "Brainrot_22_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_22_PositionZ",
-            "value": 1.6055946350097657
-        },
-        {
-            "key": "Brainrot_23_Size",
-            "value": 2.3399999141693117
-        },
-        {
-            "key": "Brainrot_23_PositionX",
-            "value": -26.166290283203126
-        },
-        {
-            "key": "Brainrot_23_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_23_PositionZ",
-            "value": 1.5435900688171387
-        },
-        {
-            "key": "Brainrot_24_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_24_PositionX",
-            "value": -27.310705184936525
-        },
-        {
-            "key": "Brainrot_24_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_24_PositionZ",
-            "value": 2.909292697906494
-        },
-        {
-            "key": "Brainrot_25_Size",
-            "value": 2.200000047683716
-        },
-        {
-            "key": "Brainrot_25_PositionX",
-            "value": -27.154865264892579
-        },
-        {
-            "key": "Brainrot_25_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_25_PositionZ",
-            "value": 2.769108772277832
-        },
-        {
-            "key": "Brainrot_26_Size",
-            "value": 2.630000114440918
-        },
-        {
-            "key": "Brainrot_26_PositionX",
-            "value": -27.13107681274414
-        },
-        {
-            "key": "Brainrot_26_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_26_PositionZ",
-            "value": 2.741550922393799
-        },
-        {
-            "key": "Brainrot_27_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_27_PositionX",
-            "value": -27.14405059814453
-        },
-        {
-            "key": "Brainrot_27_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_27_PositionZ",
-            "value": 3.004734992980957
-        },
-        {
-            "key": "Brainrot_28_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_28_PositionX",
-            "value": -26.86525535583496
-        },
-        {
-            "key": "Brainrot_28_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_28_PositionZ",
-            "value": 2.8533177375793459
-        },
-        {
-            "key": "Brainrot_29_Size",
-            "value": 2.069999933242798
-        },
-        {
-            "key": "Brainrot_29_PositionX",
-            "value": -26.726667404174806
-        },
-        {
-            "key": "Brainrot_29_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_29_PositionZ",
-            "value": 2.273094654083252
-        },
-        {
-            "key": "Brainrot_30_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_30_PositionX",
-            "value": -26.682214736938478
-        },
-        {
-            "key": "Brainrot_30_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_30_PositionZ",
-            "value": 2.4697556495666506
-        },
-        {
-            "key": "Brainrot_31_Size",
-            "value": 2.0
-        },
-        {
-            "key": "Brainrot_31_PositionX",
-            "value": -26.0667667388916
-        },
-        {
-            "key": "Brainrot_31_PositionY",
-            "value": 0.15841500461101533
-        },
-        {
-            "key": "Brainrot_31_PositionZ",
-            "value": 4.590799331665039
         }
     ],
     "stringData": [
         {
             "key": "Egg_0_UniqueId",
-            "value": "ffea8762-a2bc-41ed-9b14-fb74af8d9e02"
+            "value": "36416c9a-b493-4dea-b002-5b0067b7fec3"
         },
         {
             "key": "Egg_0_LastSaveTimeString",
-            "value": "-8584463402723219488"
-        },
-        {
-            "key": "Egg_1_UniqueId",
-            "value": "1f0d67ee-b95a-4408-ae54-5c37a06716f5"
-        },
-        {
-            "key": "Egg_1_LastSaveTimeString",
-            "value": "-8584463402713215056"
-        },
-        {
-            "key": "Egg_2_UniqueId",
-            "value": "f9976233-b8cb-4e22-8826-4c8ce7dbb725"
-        },
-        {
-            "key": "Egg_2_LastSaveTimeString",
-            "value": "-8584463397992946665"
+            "value": "-8584455437183529091"
         },
         {
             "key": "Brainrot_0_UniqueId",
-            "value": "45601318-b4d1-4980-a7b1-be0d97bd7957"
+            "value": "d69e2ec1-ea56-497c-b088-74a75e5a3b78"
         },
         {
             "key": "Brainrot_1_UniqueId",
-            "value": "c6d6e641-73f1-4197-8554-3532a34c362a"
+            "value": "15c27a8d-d775-4de2-816b-5e3ed9b7c4c4"
         },
         {
             "key": "Brainrot_2_UniqueId",
-            "value": "445ff3ef-ad69-4efb-b1e8-05434ca4494e"
+            "value": "b8265a45-9cec-4391-b4d2-2fc350f29e91"
         },
         {
             "key": "Brainrot_3_UniqueId",
-            "value": "cfe9e4c6-6389-4bdc-ad93-f18277bcfedc"
+            "value": "501254f0-fa6b-47df-9fc8-9de3aae18618"
         },
         {
             "key": "Brainrot_4_UniqueId",
-            "value": "a7da8ace-aeec-481c-ad3f-bba73751945b"
+            "value": "7c9ab9df-b615-4b41-9062-b4e2f6b8b627"
         },
         {
             "key": "Brainrot_5_UniqueId",
-            "value": "5809601c-f425-4877-ae26-65cbf8eddc45"
+            "value": "fed905db-dac6-4424-b9cf-5cadd87011b4"
         },
         {
             "key": "Brainrot_6_UniqueId",
-            "value": "001a7ace-2f1e-48af-beee-10f7b9412871"
+            "value": "200b13de-0c1c-477a-a935-9e57fb6688fb"
         },
         {
             "key": "Brainrot_7_UniqueId",
-            "value": "a0281d72-6b20-459d-b277-2e2727b4f97b"
-        },
-        {
-            "key": "Egg_3_UniqueId",
-            "value": "69abac38-d68d-421c-badb-934f28af44d6"
-        },
-        {
-            "key": "Egg_3_LastSaveTimeString",
-            "value": "-8584463397972966269"
-        },
-        {
-            "key": "Egg_4_UniqueId",
-            "value": "93e771dd-95ca-42e2-99fb-5e89296f1c1f"
-        },
-        {
-            "key": "Egg_4_LastSaveTimeString",
-            "value": "-8584463397962758324"
-        },
-        {
-            "key": "Egg_5_UniqueId",
-            "value": "d5fb21af-8d2c-4d25-aa5b-f6253733d575"
-        },
-        {
-            "key": "Egg_5_LastSaveTimeString",
-            "value": "-8584463397956826899"
-        },
-        {
-            "key": "Egg_6_UniqueId",
-            "value": "08fcdfe5-1ac5-45fd-833e-ba8950d8f149"
-        },
-        {
-            "key": "Egg_6_LastSaveTimeString",
-            "value": "-8584463397608803848"
-        },
-        {
-            "key": "Egg_7_UniqueId",
-            "value": "499813ed-9a1c-4a4b-8117-535ea51f7fcf"
-        },
-        {
-            "key": "Egg_7_LastSaveTimeString",
-            "value": "-8584463397601767055"
-        },
-        {
-            "key": "Egg_8_UniqueId",
-            "value": "25476e81-722f-40bc-add4-a34454d1c5dc"
-        },
-        {
-            "key": "Egg_8_LastSaveTimeString",
-            "value": "-8584463397591972045"
-        },
-        {
-            "key": "Egg_9_UniqueId",
-            "value": "e6000521-bb55-4137-b8f9-74e510713c76"
-        },
-        {
-            "key": "Egg_9_LastSaveTimeString",
-            "value": "-8584463397582921380"
-        },
-        {
-            "key": "Egg_10_UniqueId",
-            "value": "2356d3d0-1601-4646-8bc3-83044af7ac9f"
-        },
-        {
-            "key": "Egg_10_LastSaveTimeString",
-            "value": "-8584463397574349859"
-        },
-        {
-            "key": "Egg_11_UniqueId",
-            "value": "93f471ac-549e-4b49-9d2b-c0f6feb707de"
-        },
-        {
-            "key": "Egg_11_LastSaveTimeString",
-            "value": "-8584463397099699148"
-        },
-        {
-            "key": "Egg_12_UniqueId",
-            "value": "a7a0e084-8644-4038-970e-46faaed86b1f"
-        },
-        {
-            "key": "Egg_12_LastSaveTimeString",
-            "value": "-8584463396703063938"
-        },
-        {
-            "key": "Egg_13_UniqueId",
-            "value": "f92940e2-1b4a-42f4-9a3c-e95ca1cac7b8"
-        },
-        {
-            "key": "Egg_13_LastSaveTimeString",
-            "value": "-8584463396695780793"
-        },
-        {
-            "key": "Egg_14_UniqueId",
-            "value": "5f26f14c-b911-4b6d-a144-c38e31ac3213"
-        },
-        {
-            "key": "Egg_14_LastSaveTimeString",
-            "value": "-8584463396687750885"
-        },
-        {
-            "key": "Egg_15_UniqueId",
-            "value": "5f41aaad-1360-4522-b98a-59746b84326f"
-        },
-        {
-            "key": "Egg_15_LastSaveTimeString",
-            "value": "-8584463396676352664"
+            "value": "18fe44e1-c63b-4d4c-bc95-7941407f3343"
         },
         {
             "key": "Brainrot_8_UniqueId",
-            "value": "7f60f023-331b-4312-8673-cf6f50e1f153"
+            "value": "92ac2a44-9ca8-4674-908f-9f5f0bae978b"
         },
         {
             "key": "Brainrot_9_UniqueId",
-            "value": "1e5c6398-62f6-48a3-b667-547e854f13ac"
+            "value": "281bdb77-1a22-4b87-b9c4-1af58348ed3d"
         },
         {
             "key": "Brainrot_10_UniqueId",
-            "value": "ee72956b-c16c-4286-889e-08524b55184d"
+            "value": "3728f1fb-f06c-49b3-8c26-0348d948fc58"
         },
         {
             "key": "Brainrot_11_UniqueId",
-            "value": "b57c18f3-d991-4b45-9857-357989dcbe2e"
+            "value": "2f2e01a8-a4ba-4b3d-ae1d-ca6bcc3c3cad"
         },
         {
             "key": "Brainrot_12_UniqueId",
-            "value": "ea3841d4-d7a6-458a-97f6-ac28899099c8"
+            "value": "922df3e8-72bf-4c6d-8b49-e9f02f34a28b"
         },
         {
-            "key": "Brainrot_13_UniqueId",
-            "value": "306e7504-9d11-408e-8427-ed84cda3b4aa"
+            "key": "Egg_1_UniqueId",
+            "value": "3ba44d90-f35e-4b52-b6c6-c1e054bde1e7"
         },
         {
-            "key": "Brainrot_14_UniqueId",
-            "value": "73f4829b-399b-4bfd-b807-6d8b8680b3fa"
-        },
-        {
-            "key": "Brainrot_15_UniqueId",
-            "value": "bb9d944c-8922-4ca0-8d19-696fe78fc7d7"
-        },
-        {
-            "key": "Brainrot_16_UniqueId",
-            "value": "6f81bffa-cae2-4e01-bdba-1be863146f80"
-        },
-        {
-            "key": "Egg_16_UniqueId",
-            "value": "5d57169c-0759-433e-bd4f-9d8e5df0125b"
-        },
-        {
-            "key": "Egg_16_LastSaveTimeString",
-            "value": "-8584463396657395633"
-        },
-        {
-            "key": "Egg_17_UniqueId",
-            "value": "4ce60b48-e79f-471c-aaa8-2339044eb9ed"
-        },
-        {
-            "key": "Egg_17_LastSaveTimeString",
-            "value": "-8584463396647900397"
-        },
-        {
-            "key": "Egg_18_UniqueId",
-            "value": "afac4579-570e-49fb-85ff-ad416dc8e527"
-        },
-        {
-            "key": "Egg_18_LastSaveTimeString",
-            "value": "-8584463396501179031"
-        },
-        {
-            "key": "Egg_19_UniqueId",
-            "value": "afac4579-570e-49fb-85ff-ad416dc8e527"
-        },
-        {
-            "key": "Egg_19_LastSaveTimeString",
-            "value": "-8584463396501179031"
-        },
-        {
-            "key": "Egg_20_UniqueId",
-            "value": "afac4579-570e-49fb-85ff-ad416dc8e527"
-        },
-        {
-            "key": "Egg_20_LastSaveTimeString",
-            "value": "-8584463396501179031"
-        },
-        {
-            "key": "Egg_21_UniqueId",
-            "value": "afac4579-570e-49fb-85ff-ad416dc8e527"
-        },
-        {
-            "key": "Egg_21_LastSaveTimeString",
-            "value": "-8584463396501179031"
-        },
-        {
-            "key": "Egg_22_UniqueId",
-            "value": "afac4579-570e-49fb-85ff-ad416dc8e527"
-        },
-        {
-            "key": "Egg_22_LastSaveTimeString",
-            "value": "-8584463396501179031"
-        },
-        {
-            "key": "Egg_23_UniqueId",
-            "value": "afac4579-570e-49fb-85ff-ad416dc8e527"
-        },
-        {
-            "key": "Egg_23_LastSaveTimeString",
-            "value": "-8584463396501179031"
-        },
-        {
-            "key": "Egg_24_UniqueId",
-            "value": "afac4579-570e-49fb-85ff-ad416dc8e527"
-        },
-        {
-            "key": "Egg_24_LastSaveTimeString",
-            "value": "-8584463396501179031"
-        },
-        {
-            "key": "Egg_25_UniqueId",
-            "value": "ed0769f9-6419-4124-9881-a6a7e14d124b"
-        },
-        {
-            "key": "Egg_25_LastSaveTimeString",
-            "value": "-8584463396480502575"
-        },
-        {
-            "key": "Egg_26_UniqueId",
-            "value": "ed0769f9-6419-4124-9881-a6a7e14d124b"
-        },
-        {
-            "key": "Egg_26_LastSaveTimeString",
-            "value": "-8584463396480502575"
-        },
-        {
-            "key": "Egg_27_UniqueId",
-            "value": "6b51e5c5-0b9d-4ddf-8292-a458eb10752d"
-        },
-        {
-            "key": "Egg_27_LastSaveTimeString",
-            "value": "-8584463396473953843"
-        },
-        {
-            "key": "Egg_28_UniqueId",
-            "value": "ee12fe17-0594-4959-9ca2-203054125c5f"
-        },
-        {
-            "key": "Egg_28_LastSaveTimeString",
-            "value": "-8584463396462346570"
-        },
-        {
-            "key": "Egg_29_UniqueId",
-            "value": "ffd53109-07b6-4813-82c7-0b1f614fbd7b"
-        },
-        {
-            "key": "Egg_29_LastSaveTimeString",
-            "value": "-8584463395696992519"
-        },
-        {
-            "key": "Brainrot_17_UniqueId",
-            "value": "ac02fc48-5f01-4ca4-afb0-471495f64abe"
-        },
-        {
-            "key": "Brainrot_18_UniqueId",
-            "value": "c10a3170-2f2b-4b01-a152-9fd5d711108e"
-        },
-        {
-            "key": "Brainrot_19_UniqueId",
-            "value": "f2ee5b18-c689-4ad5-bb78-24785cdfa573"
-        },
-        {
-            "key": "Brainrot_20_UniqueId",
-            "value": "af31d8d0-70aa-4612-afff-9defa5709736"
-        },
-        {
-            "key": "Brainrot_21_UniqueId",
-            "value": "32c8508e-5c16-48ee-9b41-5309852076fd"
-        },
-        {
-            "key": "Brainrot_22_UniqueId",
-            "value": "6257d1f2-1ca9-42e7-9f98-cc6301daa897"
-        },
-        {
-            "key": "Brainrot_23_UniqueId",
-            "value": "4fe96cff-652d-41ee-9814-6eac03fa8103"
-        },
-        {
-            "key": "Brainrot_24_UniqueId",
-            "value": "08693ef9-2382-4aa6-87d4-a997417ed2f7"
-        },
-        {
-            "key": "Brainrot_25_UniqueId",
-            "value": "da317948-2ab1-4ca5-beb6-32e76ea084f5"
-        },
-        {
-            "key": "Brainrot_26_UniqueId",
-            "value": "06521a3a-5778-4088-a025-a777460c484f"
-        },
-        {
-            "key": "Brainrot_27_UniqueId",
-            "value": "500c39a2-3401-4980-ae79-3a9e99d9c917"
-        },
-        {
-            "key": "Brainrot_28_UniqueId",
-            "value": "b6116aed-cef9-4ab0-9024-6c53c2fad707"
-        },
-        {
-            "key": "Brainrot_29_UniqueId",
-            "value": "e7429c58-2f5f-4646-922b-ccebc28a4d4f"
-        },
-        {
-            "key": "Brainrot_30_UniqueId",
-            "value": "d14c7bff-0131-47af-bd4d-3690751fce31"
-        },
-        {
-            "key": "Brainrot_31_UniqueId",
-            "value": "287fc45d-f9bf-464c-acb1-c3f2bde87778"
+            "key": "Egg_1_LastSaveTimeString",
+            "value": "-8584455430208507420"
         }
     ]
 }

@@ -101,6 +101,7 @@ public class LoadInitializer : MonoBehaviour
             if (!brainrotsData[i].HasSpawned)
             {
                 InventorySystem.Instance.AddItem(brainrot, 1, false);
+                Debug.Log(brainrot.Data.UniqueId + "!!");
                 brainrot.gameObject.SetActive(false);
                 continue;
             }
