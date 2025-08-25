@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using YG;
 
@@ -50,7 +51,6 @@ public class LoadInitializer : MonoBehaviour
             Egg egg = Instantiate(prefab, position, Quaternion.identity);
             egg.Data.SetUniqueId(eggsData[i].UniqueId);
 
-            Debug.Log(egg.Data.UniqueId + "??");
             egg.Data.Rarity = eggsData[i].Rarity;
             egg.Data.Variant = eggsData[i].Variant;
             egg.Data.HasActiveTimer = eggsData[i].HasActiveTimer;
@@ -101,7 +101,6 @@ public class LoadInitializer : MonoBehaviour
             if (!brainrotsData[i].HasSpawned)
             {
                 InventorySystem.Instance.AddItem(brainrot, 1, false);
-                Debug.Log(brainrot.Data.UniqueId + "!!");
                 brainrot.gameObject.SetActive(false);
                 continue;
             }
@@ -109,6 +108,17 @@ public class LoadInitializer : MonoBehaviour
             brainrot.OnSpawnToGround();
             // SaveLoadManager.AddBrainrotData(brainrot.Data);
             // SaveLoadManager.RemoveBrainrotByUniqueId(brainrotsData[i].UniqueId);
+        }
+    }
+
+    public void InitDestroyZones(DestroyZone zone)
+    {
+        SaveLoadManager.LoadDestroyZones();
+        var zones = SaveLoadManager.DestroyZones;
+        for (int i = 0; i < zones.Count; i++)
+        {
+            if (zones[i].UniqueId == zone.UniqueId)
+                Destroy(zone.gameObject);
         }
     }
 }

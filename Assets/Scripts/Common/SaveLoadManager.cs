@@ -9,6 +9,7 @@ public class SaveLoadManager : MonoBehaviour
 {
     public List<EggData> EggsData { get; } = new();
     public List<BrainrotData> BrainrotsData { get; } = new();
+    public List<DestroyZone> DestroyZones { get; } = new();
 
 
 
@@ -23,8 +24,14 @@ public class SaveLoadManager : MonoBehaviour
     {
         data.AddUniqueId();
         BrainrotsData.Add(data);
-    } 
-    
+    }
+
+    public void AddDestroyZone(DestroyZone data)
+    {
+        DestroyZones.Add(data);
+        SaveDestroyZones();
+    }
+
     public void RemoveEggByUniqueId(string uniqueId)
     {
         var egg = EggsData.FirstOrDefault(e => e.UniqueId == uniqueId);
@@ -38,7 +45,6 @@ public class SaveLoadManager : MonoBehaviour
     public void RemoveBrainrotByUniqueId(string uniqueId)
     {
         var brainrot = BrainrotsData.FirstOrDefault(e => e.UniqueId == uniqueId);
-        Debug.Log(brainrot);
         if (brainrot != null)
         {
             BrainrotsData.Remove(brainrot);
@@ -46,7 +52,7 @@ public class SaveLoadManager : MonoBehaviour
         }
     }
 
-// Дубляж
+    // Дубляж
     public void SaveEggsData()
     {
         YG2.saves.SaveInt("Eggs", EggsData.Count);
@@ -80,7 +86,7 @@ public class SaveLoadManager : MonoBehaviour
             YG2.saves.SaveInt("Brainrot_" + i + "_Variant", (int)BrainrotsData[i].Variant);
             YG2.saves.SaveInt("Brainrot_" + i + "_Income", BrainrotsData[i].Income);
             YG2.saves.SaveFloat("Brainrot_" + i + "_Size", BrainrotsData[i].Size);
-            YG2.saves.SaveInt("Brainrot_" + i + "_HasSpawned", BrainrotsData[i].HasSpawned ? 1: 0);
+            YG2.saves.SaveInt("Brainrot_" + i + "_HasSpawned", BrainrotsData[i].HasSpawned ? 1 : 0);
             YG2.saves.SaveFloat("Brainrot_" + i + "_PositionX", BrainrotsData[i].Position.x);
             YG2.saves.SaveFloat("Brainrot_" + i + "_PositionY", BrainrotsData[i].Position.y);
             YG2.saves.SaveFloat("Brainrot_" + i + "_PositionZ", BrainrotsData[i].Position.z);
@@ -133,11 +139,34 @@ public class SaveLoadManager : MonoBehaviour
             BrainrotsData.Add(data);
         }
     }
-    
+
     public EggData FindEggData(string uniqueId)
     {
-        return EggsData.FirstOrDefault(egg => 
-            egg.UniqueId == uniqueId || 
+        return EggsData.FirstOrDefault(egg =>
+            egg.UniqueId == uniqueId ||
             egg.UniqueId == uniqueId.Replace("Egg_", ""));
     }
+
+    public void SaveDestroyZones()
+    {
+        YG2.saves.SaveInt("DestroyZones", DestroyZones.Count);
+
+        for (int i = 0; i < DestroyZones.Count; i++)
+        {
+            YG2.saves.SaveInt("DestroyZone_" + i + "_UniqueId", DestroyZones[i].UniqueId);
+        }
+        YG2.SaveProgress();
+    }
+    
+    public void LoadDestroyZones()
+    {
+        int count = YG2.saves.LoadInt("DestroyZones");
+        for (int i = 0; i < count; i++)
+        {
+            DestroyZone zone = new();
+            zone.SetUniqueId(YG2.saves.LoadInt("DestroyZone_" + i + "_UniqueId"));
+            DestroyZones.Add(zone);
+        }
+    }
+    
 }
