@@ -14,6 +14,7 @@ public class BuyDisplay : MonoBehaviour
     
     public Button GetButton => _buyButton;
 
+
     public void Initialize(System.Action onBuyCallback, Vector3 worldOffset)
     {
         _worldOffset = worldOffset;

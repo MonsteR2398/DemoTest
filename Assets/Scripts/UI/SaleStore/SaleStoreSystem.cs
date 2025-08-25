@@ -125,8 +125,6 @@ public class SaleStoreSystem : MonoBehaviour
         
         itemData.gameObject.SetActive(false);
         _itemPool.Enqueue(itemData);
-        
-        _allPrice -= itemPrice;
         _allPriceText.text = _allPrice.ToString();
     }
 

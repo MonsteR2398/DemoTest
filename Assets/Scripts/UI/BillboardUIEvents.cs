@@ -8,6 +8,7 @@ public class BillboardUIEvents : MonoBehaviour, IObjectTextDisplay
     [SerializeField] private TextMeshProUGUI targetText;
     [SerializeField] private int timeToSpawnLegendary = 60;
     [SerializeField] private int timeToSpawnMythic = 120;
+    [SerializeField] private Vector3 _displayOffset = Vector3.zero;
     
     private int currentTimeToSpawnLegendary;
     private int currentTimeToSpawnMythic;
@@ -15,7 +16,7 @@ public class BillboardUIEvents : MonoBehaviour, IObjectTextDisplay
 
     private Coroutine timerCoroutine;
 
-    public Vector3 DisplayOffset => throw new NotImplementedException();
+    public Vector3 DisplayOffset => _displayOffset;
 
     private void OnEnable()
     {

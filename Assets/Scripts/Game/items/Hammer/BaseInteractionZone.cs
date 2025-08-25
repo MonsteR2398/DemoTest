@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +8,7 @@ public abstract class BaseInteractionZone : MonoBehaviour, ITriggerEnterHandler,
     [SerializeField] protected Vector3 _displayOffset = new Vector3(0, 1f, 0);
 
     protected Renderer[] zoneRenderers;
-    public Color[] OriginalColors;
+    public Dictionary<Renderer, Color[]> OriginalColors;
     
     protected bool isActive = false;
     protected static BaseInteractionZone currentActiveZone;
@@ -20,11 +21,19 @@ public abstract class BaseInteractionZone : MonoBehaviour, ITriggerEnterHandler,
             _display.Initialize(null, _displayOffset);
             _display.SetActive(false);
         }
+        zoneRenderers = GetComponentsInChildren<Renderer>(true);
 
-        zoneRenderers = GetComponentsInChildren<Renderer>();
-        OriginalColors = new Color[zoneRenderers.Length];
-        for (int i = 0; i < zoneRenderers.Length; i++)
-            OriginalColors[i] = zoneRenderers[i].material.color;
+        OriginalColors = new Dictionary<Renderer, Color[]>();
+
+        foreach (Renderer renderer in zoneRenderers)
+        {
+            Color[] rendererColors = new Color[renderer.materials.Length];
+
+            for (int i = 0; i < renderer.materials.Length; i++)
+                rendererColors[i] = renderer.materials[i].color;
+
+            OriginalColors[renderer] = rendererColors;
+        }
     }
 
     protected virtual void OnEnable()
@@ -68,7 +77,6 @@ public abstract class BaseInteractionZone : MonoBehaviour, ITriggerEnterHandler,
         {
             if (currentZoneValid && currentActiveZone != this)
             {
-                Debug.Log(11);
                 currentActiveZone.DeactivateZone();
             }
             currentActiveZone = this;
@@ -141,18 +149,30 @@ public abstract class BaseInteractionZone : MonoBehaviour, ITriggerEnterHandler,
         if (currentActiveZone == this)
             currentActiveZone = null;
     }
-    
+
     private void SetZoneColor(Color color)
     {
-        foreach (var renderer in zoneRenderers)
-            renderer.material.color = color;
+        foreach (Renderer renderer in zoneRenderers)
+        {
+            foreach (Material material in renderer.materials)
+            {
+                material.color = color;
+            }
+        }
     }
 
-    private void ResetZoneColor()
+    public void ResetZoneColor()
     {
-        for (int i = 0; i < zoneRenderers.Length; i++)
-            zoneRenderers[i].material.color = OriginalColors[i];
+        foreach (Renderer renderer in zoneRenderers)
+        {
+            if (OriginalColors.TryGetValue(renderer, out Color[] savedColors))
+            {
+                for (int i = 0; i < renderer.materials.Length && i < savedColors.Length; i++)
+                {
+                    renderer.materials[i].color = savedColors[i];
+                }
+            }
+        }
     }
-
     public abstract void OnActionButtonClick();
 }

@@ -114,7 +114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _display: {fileID: 7714838624518232342, guid: 7aca265d1938a3d478ca7808587e0123, type: 3}
   _displayOffset: {x: 0, y: 1, z: 0}
-  OriginalColors: []
 --- !u!114 &2271295278916468188
 MonoBehaviour:
   m_ObjectHideFlags: 0

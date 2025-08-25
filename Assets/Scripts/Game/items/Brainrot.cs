@@ -24,13 +24,6 @@ public class BrainrotData
 public class Brainrot : Item, ITriggerEnterHandler, ISpawned
 {
     public BrainrotData Data;
-
-    // [Header("Sound Settings")]
-    // [SerializeField] private AudioClip _clip;
-    // [SerializeField] private float _soundRepeatInterval;
-    // [SerializeField] private float _phaseOffset;
-    // [SerializeField] private float _nextPlayTime;
-
     [Header("Animation Settings")]
     [SerializeField] private Animator _animator;
     private int _totalIncome;
@@ -46,10 +39,7 @@ public class Brainrot : Item, ITriggerEnterHandler, ISpawned
         set => Data.HasSpawned = value;
     }
 
-    private void Start()
-    {
-        Initialize();
-    }
+    private void Start() => Initialize();
 
     public void Initialize()
     {
@@ -130,7 +120,8 @@ public class Brainrot : Item, ITriggerEnterHandler, ISpawned
     public void SetSize(float size)
     {
         Data.Size = Mathf.Round(size * 100f) / 100f;
-        _displayOffset += new Vector3(0f, size, 0f);
+        Debug.Log(size);
+        _displayOffset = new Vector3(0f, size, 0f);
         transform.localScale = Vector3.one * size;
     }
     public override string GetItemID()
@@ -160,7 +151,6 @@ public class Brainrot : Item, ITriggerEnterHandler, ISpawned
 
         return rarity + totalIncome + income + variant;
     }
-
 
     private void FlipToGlobalXPos()
     {

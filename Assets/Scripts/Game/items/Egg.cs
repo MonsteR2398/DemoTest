@@ -77,13 +77,9 @@ public class Egg : Item, IConveyorMovable, ITimer, IBuyable, ISpawned
         }
 
         if (!Data.HasSpawned)
-        {
             Debug.Log($"Куплено {Data.EggType} яйцо за {_price} монет");
-        }
         else
-        {
             OpenEgg();
-        }
     }
 
     public override string GetTextOnDisplay()
@@ -143,7 +139,6 @@ public class Egg : Item, IConveyorMovable, ITimer, IBuyable, ISpawned
 
     public override string GetItemID() => $"{Data.EggType}{Data.Rarity}{Data.Variant}";
 
-    // IConveyorMovable implementation
     public void MoveToTargetOnConveyor(Vector3 target, float speed)
     {
         float step = speed * Time.fixedDeltaTime;
@@ -160,33 +155,4 @@ public class Egg : Item, IConveyorMovable, ITimer, IBuyable, ISpawned
             if (Data.HasSpawned)
         _canBuy = false;
     }
-
-    // private void SaveState()
-    // {
-    //     YG2.saves.SaveInt(_uniqueId + "_Rarity", (int)Rarity);
-    //     YG2.saves.SaveInt(_uniqueId + "_Variant", (int)Variant);
-    //     YG2.saves.SaveInt(_uniqueId + "_SpawnTimer", _spawnTimer);
-    //     YG2.saves.SaveInt(_uniqueId + "_HasActiveTimer", _hasActiveTimer ? 1 : 0);
-    //     YG2.saves.SaveInt(_uniqueId + "_HasSpawned", HasSpawned ? 1 : 0);
-    //     YG2.saves.SaveInt(_uniqueId + "_NowEnemy", _nowEnemy ? 1 : 0);
-        
-    //     YG2.saves.SaveFloat(_uniqueId + "_PositionX", transform.position.x);
-    //     YG2.saves.SaveFloat(_uniqueId + "_PositionY", transform.position.y);
-    //     YG2.saves.SaveFloat(_uniqueId + "_PositionZ", transform.position.z);
-    // }
-
-    // private void LoadState()
-    // {
-    //     Rarity = (Rarity)YG2.saves.LoadInt(_uniqueId + "_Rarity");
-    //     Variant = (Variant)YG2.saves.LoadInt(_uniqueId + "_Variant");
-    //     _spawnTimer = YG2.saves.LoadInt(_uniqueId + "_SpawnTimer");
-    //     _hasActiveTimer = YG2.saves.LoadInt(_uniqueId + "_HasActiveTimer") == 1;
-    //     HasSpawned = YG2.saves.LoadInt(_uniqueId + "_HasSpawned") == 1;
-    //     _nowEnemy = YG2.saves.LoadInt(_uniqueId + "_NowEnemy") == 1;
-        
-    //     float x = YG2.saves.LoadFloat(_uniqueId + "_PositionX");
-    //     float y = YG2.saves.LoadFloat(_uniqueId + "_PositionY");
-    //     float z = YG2.saves.LoadFloat(_uniqueId + "_PositionZ");
-    //     transform.position = new Vector3(x, y, z);
-    // }
 }

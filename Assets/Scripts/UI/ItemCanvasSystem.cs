@@ -137,6 +137,7 @@ public class ItemCanvasSystem : MonoBehaviour
     {
         foreach (var textData in _activeTexts)
             textData.TextDisplay.SetActive(false);
+            
 
         for (int i = 0; i < _nearestDisplays.Count; i++)
         {
@@ -159,7 +160,10 @@ public class ItemCanvasSystem : MonoBehaviour
             displayData.TextDisplay.Text = display.GetTextOnDisplay();
 
             if (display is MonoBehaviour monoBehaviour)
-                displayData.TextDisplay.SetPosition(monoBehaviour.transform.position, display.DisplayOffset);
+            {
+                //Debug.Log(monoBehaviour.transform.position + "  |  " + display.DisplayOffset);
+                displayData.TextDisplay.SetPosition(monoBehaviour.gameObject.transform.position, display.DisplayOffset);
+            }
 
             displayData.Display = display;
         }

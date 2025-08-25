@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
 using Unity.VisualScripting;
+using System.Collections.Generic;
 
 public class InventorySlot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
@@ -15,10 +16,10 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IDragHandler, I
 
     private Item _item;
     private int _count;
-    private Item _phantomItem;
+    public Item _phantomItem;
     private Camera _mainCamera;
     private Renderer[] _phantomRenderers;
-    private Color[] _originalColors;
+    private List<Color[]> _originalColors = new();
     private bool _canPlace;
     int exceptMask;
 
@@ -116,12 +117,21 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IDragHandler, I
                 egg.Data.SetUniqueId(egg1.Data.UniqueId);
         }
         
-        _phantomRenderers = _phantomItem.GetComponentsInChildren<Renderer>();
-        _originalColors = new Color[_phantomRenderers.Length];
+    _phantomRenderers = _phantomItem.GetComponentsInChildren<Renderer>();
+    _originalColors = new List<Color[]>(); 
 
-        for (int i = 0; i < _phantomRenderers.Length; i++)
-            if (_phantomRenderers[i].material != null)
-                _originalColors[i] = _phantomRenderers[i].material.color;
+    for (int i = 0; i < _phantomRenderers.Length; i++)
+    {
+        if (_phantomRenderers[i] != null && _phantomRenderers[i].materials != null)
+        {
+            Color[] rendererColors = new Color[_phantomRenderers[i].materials.Length];
+            for (int j = 0; j < _phantomRenderers[i].materials.Length; j++)
+            {
+                rendererColors[j] = _phantomRenderers[i].materials[j].color;
+            }
+            _originalColors.Add(rendererColors);
+        }
+    }
 
         foreach (var col in _phantomItem.GetComponentsInChildren<Collider>())
             col.enabled = false;
@@ -199,9 +209,19 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IDragHandler, I
                 col.enabled = true;
             if (_phantomItem.TryGetComponent(out BaseInteractionZone interZone))
             {
+                if (interZone.OriginalColors == null)
+                    interZone.OriginalColors = new Dictionary<Renderer, Color[]>();
+                
                 for (int i = 0; i < _phantomRenderers.Length; i++)
+                {
                     if (_phantomRenderers[i].material != null)
-                        interZone.OriginalColors[i] = _originalColors[i];
+                    {
+                        Color[] colors = new Color[_phantomRenderers[i].materials.Length];
+                        for (int j = 0; j < colors.Length; j++)
+                            colors[j] = _phantomRenderers[i].materials[j].color;
+                        interZone.OriginalColors[_phantomRenderers[i]] = colors;
+                    }
+                }
                         
             }
             _phantomItem = null;
@@ -245,17 +265,31 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IDragHandler, I
     {
         if (_phantomRenderers == null) return;
 
-        Color color = canPlace ? Color.green : Color.red;
-        if (isTransparent)
-            color.a = 0.5f;
-
-        foreach (var renderer in _phantomRenderers)
-            if (renderer.material != null)
-                renderer.material.color = color;
-
-        if (isTransparent) return;
         for (int i = 0; i < _phantomRenderers.Length; i++)
-            if (_phantomRenderers[i].material != null)
-                _phantomRenderers[i].material.color = _originalColors[i];
+        {
+            if (_phantomRenderers[i] == null) continue;
+
+            Material[] materials = _phantomRenderers[i].materials;
+            if (materials == null) continue;
+
+            for (int j = 0; j < materials.Length; j++)
+            {
+                if (materials[j] == null) continue;
+
+                if (isTransparent)
+                {
+                    Color color = canPlace ? Color.green : Color.red;
+                    color.a = 0.5f;
+                    materials[j].color = color;
+                }
+                else
+                {
+                    if (i < _originalColors.Count && j < _originalColors[i].Length)
+                        materials[j].color = _originalColors[i][j];
+                }
+            }
+
+            _phantomRenderers[i].materials = materials;
+        }
     }
 }

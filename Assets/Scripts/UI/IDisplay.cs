@@ -16,7 +16,6 @@ public abstract class UIDisplay : MonoBehaviour
     
     public void SetPosition(Vector3 worldPosition)
     {
-        // Конвертируем мировые координаты в позицию на Canvas
         var canvasRect = WorldUIManager.Instance.worldCanvas.GetComponent<RectTransform>();
         var viewportPos = Camera.main.WorldToViewportPoint(worldPosition);
 
