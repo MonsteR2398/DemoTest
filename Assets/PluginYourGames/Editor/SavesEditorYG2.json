@@ -7,7 +7,7 @@
         false,
         false
     ],
-    "idSave": 148,
+    "idSave": 154,
     "intData": [
         {
             "key": "Eggs",
@@ -59,11 +59,11 @@
         },
         {
             "key": "Brainrot_1_Id",
-            "value": 8
+            "value": 13
         },
         {
             "key": "Brainrot_1_Rarity",
-            "value": 0
+            "value": 2
         },
         {
             "key": "Brainrot_1_Variant",
@@ -75,15 +75,15 @@
         },
         {
             "key": "Brainrot_1_HasSpawned",
-            "value": 0
+            "value": 1
         },
         {
             "key": "Brainrot_2_Id",
-            "value": 13
+            "value": 8
         },
         {
             "key": "Brainrot_2_Rarity",
-            "value": 2
+            "value": 0
         },
         {
             "key": "Brainrot_2_Variant",
@@ -154,11 +154,11 @@
         },
         {
             "key": "Brainrot_1_Size",
-            "value": 2.0
+            "value": 2.0299999713897707
         },
         {
             "key": "Brainrot_1_PositionX",
-            "value": -27.622825622558595
+            "value": -27.5855655670166
         },
         {
             "key": "Brainrot_1_PositionY",
@@ -166,15 +166,15 @@
         },
         {
             "key": "Brainrot_1_PositionZ",
-            "value": 0.17045164108276368
+            "value": -3.351637840270996
         },
         {
             "key": "Brainrot_2_Size",
-            "value": 2.0299999713897707
+            "value": 2.0
         },
         {
             "key": "Brainrot_2_PositionX",
-            "value": -27.5855655670166
+            "value": -30.878677368164064
         },
         {
             "key": "Brainrot_2_PositionY",
@@ -182,7 +182,7 @@
         },
         {
             "key": "Brainrot_2_PositionZ",
-            "value": -3.351637840270996
+            "value": 1.8350293636322022
         },
         {
             "key": "Brainrot_3_Size",
@@ -190,7 +190,7 @@
         },
         {
             "key": "Brainrot_3_PositionX",
-            "value": -30.494754791259767
+            "value": -26.91362190246582
         },
         {
             "key": "Brainrot_3_PositionY",
@@ -198,7 +198,7 @@
         },
         {
             "key": "Brainrot_3_PositionZ",
-            "value": 3.3323121070861818
+            "value": 2.4567651748657228
         }
     ],
     "stringData": [
@@ -216,11 +216,11 @@
         },
         {
             "key": "Brainrot_1_UniqueId",
-            "value": "19fd0fe7-5e18-4483-90f5-cec575960e0d"
+            "value": "087fbf16-b3ec-463d-97a2-248400d70877"
         },
         {
             "key": "Brainrot_2_UniqueId",
-            "value": "087fbf16-b3ec-463d-97a2-248400d70877"
+            "value": "19fd0fe7-5e18-4483-90f5-cec575960e0d"
         },
         {
             "key": "Brainrot_3_UniqueId",

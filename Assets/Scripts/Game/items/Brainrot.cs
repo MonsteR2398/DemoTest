@@ -33,6 +33,7 @@ public class Brainrot : Item, ITriggerEnterHandler, ISpawned
     [SerializeField] private VariantMaterialsConfig materialConfig;
 
 
+
     public bool HasSpawned
     {
         get => Data.HasSpawned;
@@ -120,8 +121,7 @@ public class Brainrot : Item, ITriggerEnterHandler, ISpawned
     public void SetSize(float size)
     {
         Data.Size = Mathf.Round(size * 100f) / 100f;
-        Debug.Log(size);
-        _displayOffset = new Vector3(0f, size, 0f);
+        _currentDisplayOffset = _displayOffset + new Vector3(0f, size, 0f);
         transform.localScale = Vector3.one * size;
     }
     public override string GetItemID()

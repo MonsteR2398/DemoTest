@@ -10,6 +10,7 @@ public class Item : PoolableMono<Item>, IObjectTextDisplay
     protected bool _canBuy = true;
     public bool NowEnemy = false;
 
+    protected Vector3 _currentDisplayOffset { get; set; }
 
     public virtual void OnSpawnToGround()
     {
@@ -18,7 +19,7 @@ public class Item : PoolableMono<Item>, IObjectTextDisplay
     public override void OnGetFromPool()
     {
     }
-    public virtual Vector3 DisplayOffset => _displayOffset;
+    public virtual Vector3 DisplayOffset => _currentDisplayOffset;
     public virtual Variant GetVariant() => Variant.Default;
     public Color GetColorWithVariant(Variant variant)
     {
