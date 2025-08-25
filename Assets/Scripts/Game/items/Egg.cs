@@ -66,6 +66,8 @@ public class Egg : Item, IConveyorMovable, ITimer, IBuyable, ISpawned
     public bool SetCanBuy(bool value) => _canBuy = value;
     public bool HasActiveTimer() => Data.HasActiveTimer;
 
+    void Start() => _currentDisplayOffset = _displayOffset;
+
     public void Buy()
     {
         if (!CanBuy()) return;
