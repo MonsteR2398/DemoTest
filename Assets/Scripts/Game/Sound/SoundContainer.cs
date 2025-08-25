@@ -31,7 +31,11 @@ public class SoundContainer : MonoBehaviour, ITriggerEnterHandler, ITriggerExitH
     // private void OnTriggerEnter(Collider other) => InternalEnter(other);
     // private void OnTriggerExit(Collider other)  => InternalExit(other);
     public void HandleTriggerEnter(Collider other) => InternalEnter(other);
-    public void HandleTriggerExit(Collider other)  => InternalExit(other);
+    public void HandleTriggerExit(Collider other)
+    {
+        Debug.Log("EXIT");
+        InternalExit(other);
+    }
 
     private void InternalEnter(Collider other)
     {

@@ -18,8 +18,12 @@ public class UIEquipZone : BaseInteractionZone
         if (_item != null)
         {
             if (_item is Brainrot brainrot)
+            { 
                 if (!string.IsNullOrEmpty(brainrot.Data.UniqueId))
                     LoadInitializer.Instance.SaveLoadManager.RemoveBrainrotByUniqueId(brainrot.Data.UniqueId);
+                SoundManager.Instance.LastActiveZone.UnregisterDynamicAudio(brainrot.gameObject.GetComponent<SoundEmitter>());
+            }
+                
             InventorySystem.Instance.AddItem(_item, 1);
             gameObject.SetActive(false);
         }

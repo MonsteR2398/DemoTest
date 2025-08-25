@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 
 public class SoundManager : MonoBehaviour
 {
@@ -33,7 +34,9 @@ public class SoundManager : MonoBehaviour
 
     private double _lastScheduledBeat = 0.0;
     private readonly HashSet<string> _newScheduledKeys = new();
-    private readonly HashSet<SoundContainer> _activeZones = new();
+    private readonly HashSet<SoundContainer> ActiveZones = new();
+
+    public SoundContainer LastActiveZone = new();
 
     private void Awake()
     {
@@ -46,14 +49,14 @@ public class SoundManager : MonoBehaviour
     {
         if (zone == null) return;
 
-        if (!_activeZones.Contains(zone))
+        if (!ActiveZones.Contains(zone))
         {
-            _activeZones.Add(zone);
+            ActiveZones.Add(zone);
             _zoneCycle[zone] = (cycleLen > 0.001) ? cycleLen : 16.0;
             _zoneEmitters[zone] = new List<SoundEmitter>();
             _zoneClipSet[zone] = new HashSet<AudioClip>();
         }
-
+        LastActiveZone = zone;
         if (debugLogs) Debug.Log($"[SM] EnterZone: {zone.name} | emitters={emitters?.Count ?? 0} | startNew={startNewSession} | zoneBpm={zoneBpm} | cycle={_zoneCycle[zone]}");
 
         // если луп в списке и просили начать новую сессию — стартуем с ним
@@ -140,7 +143,7 @@ public class SoundManager : MonoBehaviour
     public void ExitZone(SoundContainer zone)
     {
         if (zone == null) return;
-        if (!_activeZones.Contains(zone)) return;
+        if (!ActiveZones.Contains(zone)) return;
 
         if (debugLogs) Debug.Log($"[SM] ExitZone: {zone.name}");
 
@@ -158,7 +161,7 @@ public class SoundManager : MonoBehaviour
         _zoneEmitters.Remove(zone);
         _zoneClipSet.Remove(zone);
         _zoneCycle.Remove(zone);
-        _activeZones.Remove(zone);
+        ActiveZones.Remove(zone);
 
         if (_loopOwnerZone == zone)
         {

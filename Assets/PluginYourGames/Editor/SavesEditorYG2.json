@@ -7,11 +7,11 @@
         false,
         false
     ],
-    "idSave": 66,
+    "idSave": 115,
     "intData": [
         {
             "key": "Eggs",
-            "value": 2
+            "value": 1
         },
         {
             "key": "Egg_0_Id",
@@ -55,7 +55,7 @@
         },
         {
             "key": "Brainrots",
-            "value": 10
+            "value": 11
         },
         {
             "key": "Brainrot_0_Id",
@@ -75,7 +75,7 @@
         },
         {
             "key": "Brainrot_0_HasSpawned",
-            "value": 1
+            "value": 0
         },
         {
             "key": "Egg_2_Id",
@@ -99,51 +99,51 @@
         },
         {
             "key": "Brainrot_1_Id",
-            "value": 1
+            "value": 6
         },
         {
             "key": "Brainrot_1_Rarity",
-            "value": 1
+            "value": 0
         },
         {
             "key": "Brainrot_1_Variant",
-            "value": 1
+            "value": 0
         },
         {
             "key": "Brainrot_1_Income",
-            "value": 90
-        },
-        {
-            "key": "Brainrot_1_HasSpawned",
-            "value": 1
-        },
-        {
-            "key": "Brainrot_2_Id",
-            "value": 6
-        },
-        {
-            "key": "Brainrot_2_Rarity",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_2_Variant",
-            "value": 0
-        },
-        {
-            "key": "Brainrot_2_Income",
             "value": 10
         },
         {
-            "key": "Brainrot_2_HasSpawned",
+            "key": "Brainrot_1_HasSpawned",
+            "value": 0
+        },
+        {
+            "key": "Brainrot_2_Id",
             "value": 1
+        },
+        {
+            "key": "Brainrot_2_Rarity",
+            "value": 1
+        },
+        {
+            "key": "Brainrot_2_Variant",
+            "value": 1
+        },
+        {
+            "key": "Brainrot_2_Income",
+            "value": 270
+        },
+        {
+            "key": "Brainrot_2_HasSpawned",
+            "value": 0
         },
         {
             "key": "Brainrot_3_Id",
-            "value": 6
+            "value": 8
         },
         {
             "key": "Brainrot_3_Rarity",
-            "value": 1
+            "value": 0
         },
         {
             "key": "Brainrot_3_Variant",
@@ -155,11 +155,11 @@
         },
         {
             "key": "Brainrot_3_HasSpawned",
-            "value": 1
+            "value": 0
         },
         {
             "key": "Brainrot_4_Id",
-            "value": 13
+            "value": 3
         },
         {
             "key": "Brainrot_4_Rarity",
@@ -175,7 +175,7 @@
         },
         {
             "key": "Brainrot_4_HasSpawned",
-            "value": 1
+            "value": 0
         },
         {
             "key": "Brainrot_5_Id",
@@ -195,11 +195,11 @@
         },
         {
             "key": "Brainrot_5_HasSpawned",
-            "value": 1
+            "value": 0
         },
         {
             "key": "Brainrot_6_Id",
-            "value": 3
+            "value": 1
         },
         {
             "key": "Brainrot_6_Rarity",
@@ -211,7 +211,7 @@
         },
         {
             "key": "Brainrot_6_Income",
-            "value": 10
+            "value": 50
         },
         {
             "key": "Brainrot_6_HasSpawned",
@@ -219,11 +219,11 @@
         },
         {
             "key": "Brainrot_7_Id",
-            "value": 8
+            "value": 13
         },
         {
             "key": "Brainrot_7_Rarity",
-            "value": 1
+            "value": 0
         },
         {
             "key": "Brainrot_7_Variant",
@@ -235,15 +235,15 @@
         },
         {
             "key": "Brainrot_7_HasSpawned",
-            "value": 1
+            "value": 0
         },
         {
             "key": "Brainrot_8_Id",
-            "value": 1
+            "value": 8
         },
         {
             "key": "Brainrot_8_Rarity",
-            "value": 0
+            "value": 1
         },
         {
             "key": "Brainrot_8_Variant",
@@ -251,7 +251,7 @@
         },
         {
             "key": "Brainrot_8_Income",
-            "value": 50
+            "value": 10
         },
         {
             "key": "Brainrot_8_HasSpawned",
@@ -259,7 +259,7 @@
         },
         {
             "key": "DestroyZones",
-            "value": 2
+            "value": 87
         },
         {
             "key": "DestroyZone_0_UniqueId",
@@ -275,7 +275,7 @@
         },
         {
             "key": "Brainrot_9_Rarity",
-            "value": 0
+            "value": 1
         },
         {
             "key": "Brainrot_9_Variant",
@@ -287,7 +287,367 @@
         },
         {
             "key": "Brainrot_9_HasSpawned",
-            "value": 1
+            "value": 0
+        },
+        {
+            "key": "Brainrot_10_Id",
+            "value": 6
+        },
+        {
+            "key": "Brainrot_10_Rarity",
+            "value": 0
+        },
+        {
+            "key": "Brainrot_10_Variant",
+            "value": 0
+        },
+        {
+            "key": "Brainrot_10_Income",
+            "value": 10
+        },
+        {
+            "key": "Brainrot_10_HasSpawned",
+            "value": 0
+        },
+        {
+            "key": "DestroyZone_2_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_3_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_4_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_5_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_6_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_7_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_8_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_9_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_10_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_11_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_12_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_13_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_14_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_15_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_16_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_17_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_18_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_19_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_20_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_21_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_22_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_23_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_24_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_25_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_26_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_27_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_28_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_29_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_30_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_31_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_32_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_33_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_34_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_35_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_36_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_37_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_38_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_39_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_40_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_41_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_42_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_43_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_44_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_45_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_46_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_47_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_48_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_49_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_50_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_51_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_52_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_53_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_54_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_55_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_56_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_57_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_58_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_59_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_60_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_61_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_62_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_63_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_64_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_65_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_66_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_67_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_68_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_69_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_70_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_71_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_72_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_73_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_74_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_75_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_76_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_77_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_78_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_79_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_80_UniqueId",
+            "value": 22
+        },
+        {
+            "key": "DestroyZone_81_UniqueId",
+            "value": 32
+        },
+        {
+            "key": "DestroyZone_82_UniqueId",
+            "value": 25
+        },
+        {
+            "key": "DestroyZone_83_UniqueId",
+            "value": 31
+        },
+        {
+            "key": "DestroyZone_84_UniqueId",
+            "value": 6
+        },
+        {
+            "key": "DestroyZone_85_UniqueId",
+            "value": 12
+        },
+        {
+            "key": "DestroyZone_86_UniqueId",
+            "value": 27
         }
     ],
     "longData": [],
@@ -326,11 +686,11 @@
         },
         {
             "key": "Brainrot_0_Size",
-            "value": 2.0
+            "value": 2.1700000762939455
         },
         {
             "key": "Brainrot_0_PositionX",
-            "value": -28.24456787109375
+            "value": -25.92940902709961
         },
         {
             "key": "Brainrot_0_PositionY",
@@ -338,7 +698,7 @@
         },
         {
             "key": "Brainrot_0_PositionZ",
-            "value": 1.946058750152588
+            "value": 4.519359588623047
         },
         {
             "key": "Egg_2_SpawnTimer",
@@ -358,11 +718,11 @@
         },
         {
             "key": "Brainrot_1_Size",
-            "value": 2.0
+            "value": 2.4700000286102297
         },
         {
             "key": "Brainrot_1_PositionX",
-            "value": -27.695968627929689
+            "value": -28.019546508789064
         },
         {
             "key": "Brainrot_1_PositionY",
@@ -370,15 +730,15 @@
         },
         {
             "key": "Brainrot_1_PositionZ",
-            "value": -3.7542943954467775
+            "value": -2.307218074798584
         },
         {
             "key": "Brainrot_2_Size",
-            "value": 2.4700000286102297
+            "value": 2.0
         },
         {
             "key": "Brainrot_2_PositionX",
-            "value": -28.019546508789064
+            "value": -27.695968627929689
         },
         {
             "key": "Brainrot_2_PositionY",
@@ -386,15 +746,15 @@
         },
         {
             "key": "Brainrot_2_PositionZ",
-            "value": -2.307218074798584
+            "value": -3.7542943954467775
         },
         {
             "key": "Brainrot_3_Size",
-            "value": 2.430000066757202
+            "value": 2.0
         },
         {
             "key": "Brainrot_3_PositionX",
-            "value": -26.578697204589845
+            "value": -38.76938247680664
         },
         {
             "key": "Brainrot_3_PositionY",
@@ -402,15 +762,15 @@
         },
         {
             "key": "Brainrot_3_PositionZ",
-            "value": -5.607120513916016
+            "value": 2.4132790565490724
         },
         {
             "key": "Brainrot_4_Size",
-            "value": 2.1700000762939455
+            "value": 2.0
         },
         {
             "key": "Brainrot_4_PositionX",
-            "value": -25.92940902709961
+            "value": -25.82852554321289
         },
         {
             "key": "Brainrot_4_PositionY",
@@ -418,7 +778,7 @@
         },
         {
             "key": "Brainrot_4_PositionZ",
-            "value": 4.519359588623047
+            "value": -7.523903846740723
         },
         {
             "key": "Brainrot_5_Size",
@@ -426,7 +786,7 @@
         },
         {
             "key": "Brainrot_5_PositionX",
-            "value": -26.29777717590332
+            "value": -28.309246063232423
         },
         {
             "key": "Brainrot_5_PositionY",
@@ -434,7 +794,7 @@
         },
         {
             "key": "Brainrot_5_PositionZ",
-            "value": 0.09846082329750061
+            "value": -4.385061740875244
         },
         {
             "key": "Brainrot_6_Size",
@@ -442,7 +802,7 @@
         },
         {
             "key": "Brainrot_6_PositionX",
-            "value": -25.82852554321289
+            "value": -27.80156898498535
         },
         {
             "key": "Brainrot_6_PositionY",
@@ -450,15 +810,15 @@
         },
         {
             "key": "Brainrot_6_PositionZ",
-            "value": -7.523903846740723
+            "value": -1.7950427532196046
         },
         {
             "key": "Brainrot_7_Size",
-            "value": 2.0399999618530275
+            "value": 2.0
         },
         {
             "key": "Brainrot_7_PositionX",
-            "value": -30.892995834350587
+            "value": -26.46324348449707
         },
         {
             "key": "Brainrot_7_PositionY",
@@ -466,15 +826,15 @@
         },
         {
             "key": "Brainrot_7_PositionZ",
-            "value": 0.6171940565109253
+            "value": -3.375856876373291
         },
         {
             "key": "Brainrot_8_Size",
-            "value": 2.0
+            "value": 2.0399999618530275
         },
         {
             "key": "Brainrot_8_PositionX",
-            "value": -25.711599349975587
+            "value": -26.577877044677736
         },
         {
             "key": "Brainrot_8_PositionY",
@@ -482,15 +842,15 @@
         },
         {
             "key": "Brainrot_8_PositionZ",
-            "value": 7.444913387298584
+            "value": -0.11555290222167969
         },
         {
             "key": "Brainrot_9_Size",
-            "value": 2.0
+            "value": 2.430000066757202
         },
         {
             "key": "Brainrot_9_PositionX",
-            "value": -37.41436004638672
+            "value": -28.919864654541017
         },
         {
             "key": "Brainrot_9_PositionY",
@@ -498,7 +858,23 @@
         },
         {
             "key": "Brainrot_9_PositionZ",
-            "value": 2.4043402671813967
+            "value": -4.58698034286499
+        },
+        {
+            "key": "Brainrot_10_Size",
+            "value": 2.0
+        },
+        {
+            "key": "Brainrot_10_PositionX",
+            "value": -28.007930755615236
+        },
+        {
+            "key": "Brainrot_10_PositionY",
+            "value": 0.15841500461101533
+        },
+        {
+            "key": "Brainrot_10_PositionZ",
+            "value": -0.5757579803466797
         }
     ],
     "stringData": [
@@ -520,7 +896,7 @@
         },
         {
             "key": "Brainrot_0_UniqueId",
-            "value": "7c39c9d3-a01e-4384-81b6-02e142f79d06"
+            "value": "a8d4d2fc-47f9-4244-9193-34587f6c404b"
         },
         {
             "key": "Egg_2_UniqueId",
@@ -532,19 +908,19 @@
         },
         {
             "key": "Brainrot_1_UniqueId",
-            "value": "8a101701-1209-4104-8591-349ff4942e46"
-        },
-        {
-            "key": "Brainrot_2_UniqueId",
             "value": "fad33c16-d2fe-4f7e-a25f-0fa16015a09b"
         },
         {
+            "key": "Brainrot_2_UniqueId",
+            "value": "8a101701-1209-4104-8591-349ff4942e46"
+        },
+        {
             "key": "Brainrot_3_UniqueId",
-            "value": "d8a31933-203a-4283-b5b7-b4ecc7b1858f"
+            "value": "7fd8850f-dcf5-43bf-82c2-b78bf8f1ccdb"
         },
         {
             "key": "Brainrot_4_UniqueId",
-            "value": "a8d4d2fc-47f9-4244-9193-34587f6c404b"
+            "value": "60930d24-d536-41f3-b9cf-45f4a0417304"
         },
         {
             "key": "Brainrot_5_UniqueId",
@@ -552,18 +928,22 @@
         },
         {
             "key": "Brainrot_6_UniqueId",
-            "value": "60930d24-d536-41f3-b9cf-45f4a0417304"
-        },
-        {
-            "key": "Brainrot_7_UniqueId",
-            "value": "9d1971fb-8ecd-4538-be16-97236d7346f3"
-        },
-        {
-            "key": "Brainrot_8_UniqueId",
             "value": "35e0815b-b706-4d75-9364-56422fe9017a"
         },
         {
+            "key": "Brainrot_7_UniqueId",
+            "value": "7c39c9d3-a01e-4384-81b6-02e142f79d06"
+        },
+        {
+            "key": "Brainrot_8_UniqueId",
+            "value": "9d1971fb-8ecd-4538-be16-97236d7346f3"
+        },
+        {
             "key": "Brainrot_9_UniqueId",
+            "value": "d8a31933-203a-4283-b5b7-b4ecc7b1858f"
+        },
+        {
+            "key": "Brainrot_10_UniqueId",
             "value": "d06cfbb8-d8e4-4d2a-88f2-b1dcb1209aa0"
         }
     ]
