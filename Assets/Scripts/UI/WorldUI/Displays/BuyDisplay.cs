@@ -52,13 +52,13 @@ public class BuyDisplay : MonoBehaviour
     void LateUpdate()
     {
         if (_target == null) return;
-        
+
         Vector3 worldPos = _target.position + _worldOffset;
         Vector2 screenPos = Camera.main.WorldToScreenPoint(worldPos);
-        
+
         screenPos.x = Mathf.Clamp(screenPos.x, 0, Screen.width);
         screenPos.y = Mathf.Clamp(screenPos.y, 0, Screen.height);
-        
+
         _rectTransform.position = screenPos;
     }
 }

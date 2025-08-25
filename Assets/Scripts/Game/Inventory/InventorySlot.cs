@@ -179,11 +179,11 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IDragHandler, I
             }
             else if (_phantomItem is Brainrot brainrot)
             {
-                Debug.Log(brainrot.Data.UniqueId);
                 LoadInitializer.Instance.SaveLoadManager.RemoveBrainrotByUniqueId(brainrot.Data.UniqueId);
                 _phantomItem.OnSpawnToGround();
+                brainrot.NowEnemy = false;
+                TextDisplayEvents.RaiseDisplayEnabled(brainrot);
                 LoadInitializer.Instance.SaveLoadManager.AddBrainrotData(brainrot.Data);
-                Debug.Log(1);
                 LoadInitializer.Instance.SaveLoadManager.SaveBrainrotsData();
             }
             

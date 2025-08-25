@@ -165,74 +165,15 @@ public class ItemCanvasSystem : MonoBehaviour
         }
     }
 
-    // private void UpdateBuyDisplay()
-    // {
-    //     if (_activeBuyDisplay == null) return;
-
-    //     IBuyable nearestBuyable = null;
-    //     float minDistance = float.MaxValue;
-    //     Transform nearestTransform = null;
-
-    //     foreach (var display in _nearestDisplays)
-    //     {
-    //         if (display is IBuyable buyable && display is MonoBehaviour mono)
-    //         {
-    //             float distance = Vector3.Distance(_playerTransform.position, mono.transform.position);
-    //             if (distance < minDistance && distance <= _maxBuyDisplayDistance)
-    //             {
-    //                 nearestBuyable = buyable;
-    //                 nearestTransform = mono.transform;
-    //                 minDistance = distance;
-    //             }
-    //         }
-    //     }
-
-    //     if (nearestBuyable != null && nearestTransform != null)
-    //     {
-    //         _activeBuyDisplay.SetTarget(nearestTransform);
-    //         _activeBuyDisplay.SetCanBuy(nearestBuyable.CanBuy());
-    //          _activeBuyDisplay.SetActive(true);
-    //         _currentBuyable = nearestBuyable;
-    //         if (nearestBuyable is not Item item) return;
-    //             // Debug.Log(item, item);
-    //             // Debug.Break();
-    //         if (item.NowEnemy)
-    //         {
-    //             _activeBuyDisplay.SetText("Украсть");
-    //             return;
-    //         }
-    //             if (item is ISpawned spawned)
-    //             {
-    //                 if (!spawned.HasSpawned)
-    //                 {
-    //                     _activeBuyDisplay.SetText($"Купить ({nearestBuyable.GetPrice()})");
-    //                     return;
-    //                 }
-    //             }
-    //         if (item is ITimer timerObj && timerObj.HasActiveTimer())
-    //             _activeBuyDisplay.SetText($"Пропустить оживление? ({nearestBuyable.GetPrice()})");
-    //         else
-    //             _activeBuyDisplay.SetText($"Вылупить ({nearestBuyable.GetPrice()})");
-    //     }
-    //     else
-    //     {
-    //         _activeBuyDisplay.SetActive(false);
-    //         _currentBuyable = null;
-    //     }
-    // }
-
     private void UpdateBuyDisplay()
     {
         if (_activeBuyDisplay == null) return;
-
+    
         if (TryGetNearestBuyable(out IBuyable nearestBuyable, out Transform nearestTransform))
         {
-            if (nearestBuyable != null)
-            {
-
-                SetupDisplay(_activeBuyDisplay, nearestBuyable, nearestTransform);
-                _currentBuyable = nearestBuyable;
-            }
+            // Теперь nearestTransform всегда соответствует nearestBuyable
+            SetupDisplay(_activeBuyDisplay, nearestBuyable, nearestTransform);
+            _currentBuyable = nearestBuyable;
         }
         else
         {
@@ -263,40 +204,33 @@ public class ItemCanvasSystem : MonoBehaviour
             display.SetText($"Вылупить ({buyable.GetPrice()})");
     }
 
-    public bool TryGetNearestBuyable(out IBuyable nearestBuyable, out Transform nearestTransform)
+public bool TryGetNearestBuyable(out IBuyable nearestBuyable, out Transform nearestTransform)
+{
+    nearestBuyable = null;
+    nearestTransform = null;
+    float minDistance = float.MaxValue;
+    
+    foreach (var display in _nearestDisplays)
     {
-        nearestBuyable = null;
-        nearestTransform = null;
-        float minDistance = float.MaxValue;
-        foreach (var display in _nearestDisplays)
+        if (display is MonoBehaviour mono)
         {
-            if (display is MonoBehaviour mono)
+            float distance = Vector3.Distance(_playerTransform.position, mono.transform.position);
+            
+            // Ищем только IBuyable объекты
+            if (display is IBuyable buyable)
             {
-                float distance = Vector3.Distance(_playerTransform.position, mono.transform.position);
-                if (display is IBuyable buyable)
+                if (distance < minDistance && distance <= _maxBuyDisplayDistance)
                 {
-                    if (distance < minDistance && distance <= _maxBuyDisplayDistance)
-                    {
-                        nearestBuyable = buyable;
-                        nearestTransform = mono.transform;
-                        minDistance = distance;
-                    }
-                }
-                else if (display is ISpawned)
-                {
-                    if (distance < minDistance && distance <= _maxBuyDisplayDistance)
-                    {
-                        nearestTransform = mono.transform;
-                        minDistance = distance;
-                        return true;
-                    }
+                    nearestBuyable = buyable;
+                    nearestTransform = mono.transform; // Гарантируем соответствие!
+                    minDistance = distance;
                 }
             }
-
         }
-
-        return nearestBuyable != null;
     }
+
+    return nearestBuyable != null;
+}
 
     private void SetupDisplay(BuyDisplay display, IBuyable buyable, Transform targetTransform)
     {

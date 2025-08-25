@@ -67,7 +67,10 @@ public abstract class BaseInteractionZone : MonoBehaviour, ITriggerEnterHandler,
         if (!currentZoneValid || IsCloserToPlayerThan(playerTransform, currentActiveZone))
         {
             if (currentZoneValid && currentActiveZone != this)
+            {
+                Debug.Log(11);
                 currentActiveZone.DeactivateZone();
+            }
             currentActiveZone = this;
             SetZoneColor(new Color(1, 0, 0, 0.75f));
             _display.SetActive(true);

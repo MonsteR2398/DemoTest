@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6387479161699131746}
   - component: {fileID: 845778465603023230}
   - component: {fileID: -1966870885459115376}
+  - component: {fileID: 597070420013777070}
   m_Layer: 0
   m_Name: Egg 5
   m_TagString: Untagged
@@ -141,6 +142,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.01, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &597070420013777070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4282528454576641716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf05b0e062aae9c4eb84d9610a6edfb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _display: {fileID: 0}
+  _displayOffset: {x: 0, y: 1, z: 0}
+  OriginalColors: []
 --- !u!1001 &7150185366847882553
 PrefabInstance:
   m_ObjectHideFlags: 0
